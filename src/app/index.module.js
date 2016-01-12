@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('eComm', ['toastr']);
+    .module('eComm', ['ui.router', 'toastr']);
 
 })();
