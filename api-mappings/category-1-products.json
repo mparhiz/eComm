@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Samsung GT1234",
+    "category": "Electronics",
+    "subCategory": "TV",
+    "price": "100",
+    "imageURl": "",
+    "availableDate": "2016-02-01"
+  },
+  {
+    "id": 2,
+    "name": "Samsung GT1235",
+    "category": "Electronics",
+    "subCategory": "TV",
+    "price": "100",
+    "imageURl": "",
+    "availableDate": "2016-02-01"
+  },
+  {
+    "id": "3",
+    "name": "Samsung GT1236",
+    "category": "Electronics",
+    "subCategory": "TV",
+    "price": "100",
+    "imageURl": "",
+    "availableDate": "2016-02-01"
+  },
+  {
+    "id": "4",
+    "name": "Samsung GT1237",
+    "category": "Electronics",
+    "subCategory": "TV",
+    "price": "100",
+    "imageURl": "",
+    "availableDate": "2016-02-01"
+  }
+]

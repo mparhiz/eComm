@@ -9,7 +9,10 @@ var browserSyncSpa = require('browser-sync-spa');
 
 var util = require('util');
 
-var proxyMiddleware = require('http-proxy-middleware');
+var bodyParser = require('body-parser');
+var apimock = require('apimock-middleware');
+
+//var proxyMiddleware = require('http-proxy-middleware');
 
 function browserSyncInit(baseDir, browser) {
   browser = browser === undefined ? 'default' : browser;
@@ -23,7 +26,11 @@ function browserSyncInit(baseDir, browser) {
 
   var server = {
     baseDir: baseDir,
-    routes: routes
+    routes: routes,
+    middleware: [
+      bodyParser.json(),
+      apimock('./api-mappings/mappings.yml')
+    ]
   };
 
   /*

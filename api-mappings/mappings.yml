@@ -1,0 +1,18 @@
+#########################################
+#
+# Retrieving the list of all products for electronics (categoryId = 1).
+#
+#########################################
+- request:
+    url: /api/categories/1/products
+    method: GET
+  response:
+    status: 200
+    file: "category-1-products.json"
+
+#- request:
+#    url: /api/users
+#    method: POST
+#  response:
+#    status: "<%= body.name ? 201 : 422 %>"
+#    file: "json/users/<%= body.name ? 'created' : 'failed' %>.json"
