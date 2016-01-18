@@ -8,7 +8,7 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-    /*  
+/*  
       .state('home', {
         url: '/',
         templateUrl: 'app/main/main.html',
@@ -16,6 +16,7 @@
         controllerAs: 'main'
       })
 */
+ 
       .state('home', {
         url: '/',
         templateUrl: 'app/homepage/main.html',
@@ -23,11 +24,12 @@
         controllerAs: 'main'
       })
       .state('home.products', {
-        url: '/products',
+        url: 'products',
         templateUrl: 'app/homepage/products.html'
       });
 
     $urlRouterProvider.otherwise('/');
+    /*$locationProvider.html5Mode(true);*/
   }
 
 })();
