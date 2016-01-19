@@ -2,7 +2,6 @@
   'use strict';
 
   angular
-    .module('eComm')
-    .constant('moment', moment);
+    .module('eComm');
 
 })();
