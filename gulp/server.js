@@ -10,9 +10,7 @@ var browserSyncSpa = require('browser-sync-spa');
 var util = require('util');
 
 var bodyParser = require('body-parser');
-var apimock = require('apimock-middleware');
-
-//var proxyMiddleware = require('http-proxy-middleware');
+var apiMock = require('apimock-middleware');
 
 
 function browserSyncInit(baseDir, browser) {
@@ -30,7 +28,7 @@ function browserSyncInit(baseDir, browser) {
     routes: routes,
     middleware: [
       bodyParser.json(),
-      apimock('./api-mappings/mappings.yml')
+      apiMock('./api-mappings/mappings.yml')
     ]
   };
 
