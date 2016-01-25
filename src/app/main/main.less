@@ -12,17 +12,19 @@
 }
 
 
-.menu {
+
+.navbar {
   background-color: rgba(119,175,169,.8);
   overflow: auto;
   position: absolute;
-  height: 100px;
+  border: 0;
+  height: 130px;
   width: 100%;
   top: 20px;
   z-index: 1;
 }
 
-.menu img {
+.navbar .navbar-brand img {
   display: block;
   float: left;
   height: 100px;
@@ -31,17 +33,28 @@
   margin-right: 20px;
 }
 
-.nav { 
+.navbar .nav { 
   margin-top: 70px;
 }
 
-.nav ul li a{
-  color: black;
-  text-decoration: none;
+.navbar-default .navbar-nav > li > a {
+  color: black !important;
 }
-.nav ul li a:hover{
-  color: white;
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff !important;
+  background-color: transparent;
 }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #bfbfbf !important;
+  background-color: transparent !important;
+}
+
+
+
 
 .search {
   background-color: rgba(119,175,169,.8);
@@ -197,20 +210,29 @@ background: #428bca;
 
 
 .footer {
-  background-color: #77AFA9;
+  position: relative;
   text-align: center;
-  height: 130px;
+  bottom: 0;
   width: 100%;
+  height: auto;
+  background-color: #77AFA9;
 }
 
 .footer ul {
   list-style-type: none;
 }
 .footer li {
-  
   text-align: left;
 }
-
 .footer h4 {
   color: #fff;
+  text-decoration: underline;
+}
+
+.footer .social a {
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
 }

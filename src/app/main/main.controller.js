@@ -27,6 +27,6 @@
         caption: 'Product'
       }
     ];
-}
+  }
 
 })();
