@@ -29,4 +29,39 @@
     ];
   }
 
+  angular
+    .module('mainNavbar')
+    .controller('mainNavbarController',mainNavbarController);
+    
+    function mainNavbarController(){
+      var vm = this;
+      vm.items = [
+        {
+          title: 'Home',
+          reference: '#home',
+          status: 'active'
+        },
+        {
+          title: 'Products',
+          reference: '#products',
+          status: 'none'
+        },
+        {
+          title: 'Sale',
+          reference: '#sale',
+          status: 'none'
+        },
+        {
+          title: 'About Us',
+          reference: '#about',
+          status: 'none'
+        },
+        {
+          title: 'Contact Us',
+          reference: '#contact',
+          status: 'none'
+        }
+      ];
+    }
+         
 })();
