@@ -1,0 +1,12 @@
+<div ng-app='mainCarousel'>
+  <div ng-controller="mainCarouselController as carouselCtrl" id="slides_control">
+    <carousel interval="carouselCtrl.myInterval">
+      <slide ng-repeat="slide in carouselCtrl.slides" active="slide.active" >
+        <img ng-src="{{slide.image}}">
+        <div class="carousel-caption">
+          <h2>{{slide.caption}}</h2>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>

@@ -2,9 +2,9 @@
   'use strict';
 
   angular
-    .module('mainCarousel', []);
+   .module('mainCarousel', ['ngAnimate']);
 
   angular
-    .module('mainNavbar', []);
-    
+   .module('mainNavbar', []);
+  
 })();
