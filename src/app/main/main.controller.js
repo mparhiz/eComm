@@ -64,4 +64,20 @@
       ];
     }
          
+  angular
+    .module('mainHotOffers')
+    .controller('mainHotOffersController',mainHotOffersController);
+    
+    function mainHotOffersController($http){
+      var vm = this;
+      $http.get('api/main/hotoffers')
+        .success( function(data) {
+          vm.hotoffers = data;
+        })
+        .error( function(data, status, headers, config) {
+          alert('data: '+ data + '| status: '+status+' |Headers: '+headers+' |config: '+config);
+      });
+
+    }
+
 })();

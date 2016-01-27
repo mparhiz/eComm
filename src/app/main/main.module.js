@@ -7,4 +7,7 @@
   angular
    .module('mainNavbar', []);
   
+  angular
+   .module('mainHotOffers', []);
+
 })();

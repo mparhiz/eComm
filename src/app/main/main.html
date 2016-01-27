@@ -5,7 +5,7 @@
 <div ng-include="'app/components/search/search.html'"></div>
 
 <div class="container">
-  <div class="row hot-offers">
+  <div ng-app="mainHotOffers" ng-controller="mainHotOffersController as mainHotOffersCtrl" class="row hot-offers">
     <div class="col-md-12">
       <div class="tabbable-panel">
         <div class="tabbable-line">
@@ -38,10 +38,12 @@
                     <div class="carousel-inner">
                       <div class="item active">
                         <div class="row">
+                          <div ng-repeat="hotoffer in mainHotOffersCtrl.hotoffers | orderBy: name | limitTo: 4" class="col-md-3"><a href="#" class="thumbnail">{{hotoffer.name}}<img src="{{hotoffer.imageURl}}" alt="{{hotoffer.name}}" style="width: 150px; height: 150px;">{{hotoffer.price}}</a></div>
+                          <!--
                           <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
                           <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
                           <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
+                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>-->
                         </div><!--.row-->
                       </div><!--.item-->
 

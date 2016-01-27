@@ -10,6 +10,21 @@
     status: 200
     file: "category-1-products.json"
 
+
+#######################################################################
+#
+# Retrieving the list of Hot-Offers for showing on the main page.
+#
+#######################################################################
+- request:
+    url: /api/main/hotoffers
+    method: GET
+  response:
+    status: 200
+    file: "main-hotoffers.json"
+
+
+
 #- request:
 #    url: /api/users
 #    method: POST
