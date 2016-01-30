@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "dependencies": {
     "angular-ui-router": "~0.2.15",
-<<<<<<< HEAD
     "bootstrap": "~3.3.5",
     "angular-bootstrap": "~0.13.4",
     "malarkey": "yuanqing/malarkey#~1.3.1",
@@ -11,14 +10,11 @@
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
     "angular": "~1.4.8",
-    "angular-animate": "~1.5.0"
-=======
-    "angular-animate": "1.4.8",
+    "angular-animate": "~1.5.0",
     "moment": "~2.10.6",
     "bootstrap": "~3.3.5",
     "angular-bootstrap": "~0.13.4",
     "angular": "~1.4.8"
->>>>>>> 9e3c8e2e4e1e4573ccf731c3af50af6f89cde166
   },
   "devDependencies": {
     "angular-mocks": "~1.4.8"
