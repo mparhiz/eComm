@@ -4,66 +4,31 @@
   angular
     .module('mainCarousel')
     .controller('mainCarouselController',mainCarouselController);
-
  
-  function mainCarouselController(){
+  function mainCarouselController(mainCarouselService){
     var vm = this;
     vm.myInterval = 3000;
-    vm.slides = [
-      {
-        image: 'assets/images/sectors-consumer-products.jpg',
-        caption: 'eShopping'
-      },
-      {
-        image: 'assets/images/cloth-products2.jpg',
-        caption: 'Cloth'
-      },
-      {
-        image: 'assets/images/Electronic-Products.jpg',
-        caption: 'Electrinic'
-      },
-      {
-        image: 'assets/images/Internet-of-Things.jpg',
-        caption: 'Product'
-      }
-    ];
+
+    mainCarouselService.getCarousel(function(data) {
+      vm.slides = data;
+    });
   }
+
+
 
   angular
     .module('mainNavbar')
     .controller('mainNavbarController',mainNavbarController);
     
-    function mainNavbarController(){
+    function mainNavbarController(mainNavbarService){
       var vm = this;
-      vm.items = [
-        {
-          title: 'Home',
-          reference: '#home',
-          status: 'active'
-        },
-        {
-          title: 'Products',
-          reference: '#products',
-          status: 'none'
-        },
-        {
-          title: 'Sale',
-          reference: '#sale',
-          status: 'none'
-        },
-        {
-          title: 'About Us',
-          reference: '#about',
-          status: 'none'
-        },
-        {
-          title: 'Contact Us',
-          reference: '#contact',
-          status: 'none'
-        }
-      ];
+      mainNavbarService.getNavbar(function(data) {
+        vm.items = data;
+      });
     }
          
+  
+
   angular
     .module('mainHotOffers')
     .controller('mainHotOffersController',mainHotOffersController);

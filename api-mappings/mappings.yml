@@ -10,6 +10,29 @@
     status: 200
     file: "category-1-products.json"
 
+##############################################################################
+#
+# Retrieving the list of navbar titels for showing on the navbar of main page.
+#
+##############################################################################
+- request:
+    url: /api/main/navbar
+    method: GET
+  response:
+    status: 200
+    file: "main-navbar.json" 
+
+##############################################################################
+#
+# Retrieving the list of carousel info for sliding on the main page.
+#
+##############################################################################
+- request:
+    url: /api/main/carousel
+    method: GET
+  response:
+    status: 200
+    file: "main-carousel.json" 
 
 #######################################################################
 #
@@ -22,6 +45,8 @@
   response:
     status: 200
     file: "main-hotoffers.json"
+
+
 
 
 
