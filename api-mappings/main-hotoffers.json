@@ -6,7 +6,7 @@
   "subCategory": "Baby",
   "availableDate" : "2015-07-06T00:00:00.000Z",
   "price" : 19.95,
-  "imageURl" : "app/main/Products_imgs/1001.jpg"
+  "imageUrl" : "app/main/Products_imgs/1001.jpg"
   },
   {
   "id" : "1002",
@@ -15,7 +15,7 @@
   "subCategory": "Baby",
   "availableDate" : "2015-07-07T00:00:00.000Z",
   "price" : 100.00,
-  "imageURl" : "app/main/Products_imgs/1002.jpg"
+  "imageUrl" : "app/main/Products_imgs/1002.jpg"
   },
   {
   "id" : "1003",
@@ -24,7 +24,7 @@
   "subCategory": "Baby",
   "availableDate" : "2015-09-08T00:00:00.000Z",
   "price" : 20.50,
-  "imageURl" : "app/main/Products_imgs/1003.jpg"
+  "imageUrl" : "app/main/Products_imgs/1003.jpg"
   },
   {
   "id" : "1004",
@@ -33,7 +33,7 @@
   "subCategory": "Baby",
   "availableDate" : "2015-10-30T00:00:00.000Z",
   "price" : 31.00,
-  "imageURl" : "app/main/Products_imgs/1004.jpg"
+  "imageUrl" : "app/main/Products_imgs/1004.jpg"
   },
   {
   "id" : "1101",
@@ -42,7 +42,7 @@
   "subCategory": "Doll",
   "availableDate" : "2015-01-01T00:00:00.000Z",
   "price" : 29.99,
-  "imageURl" : "app/main/Products_imgs/1101.jpg"
+  "imageUrl" : "app/main/Products_imgs/1101.jpg"
   },
   {
   "id" : "1102",
@@ -51,7 +51,7 @@
   "subCategory": "Puzzle",
   "availableDate" : "2015-02-30T00:00:00.000Z",
   "price" : 39.99,
-  "imageURl" : "app/main/Products_imgs/1102.jpg"
+  "imageUrl" : "app/main/Products_imgs/1102.jpg"
   },
   {
   "id" : "1201",
@@ -60,7 +60,7 @@
   "subCategory": "Computer",
   "availableDate" : "2015-05-30T00:00:00.000Z",
   "price" : 300.00,
-  "imageURl" : "app/main/Products_imgs/1201.jpg"
+  "imageUrl" : "app/main/Products_imgs/1201.jpg"
   },
   {
   "id" : "1301",
@@ -69,7 +69,7 @@
   "subCategory": "TV",
   "availableDate" : "2015-12-07T00:00:00.000Z",
   "price" : 99.99,
-  "imageURl" : "app/main/Products_imgs/1301.jpg"
+  "imageUrl" : "app/main/Products_imgs/1301.jpg"
   }
 ]
 

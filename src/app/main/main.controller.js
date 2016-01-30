@@ -77,7 +77,6 @@
         .error( function(data, status, headers, config) {
           alert('data: '+ data + '| status: '+status+' |Headers: '+headers+' |config: '+config);
       });
-
     }
 
 })();
