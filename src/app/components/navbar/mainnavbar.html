@@ -1,4 +1,4 @@
-<div ng-app="mainNavbar" ng-controller="mainNavbarController as NavbarCtrl">
+<div ng-controller="NavbarController as NavbarCtrl">
   <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
@@ -7,13 +7,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand hidden-xs" href="#"><img src="assets/images/eComm_logo.png"></a>
-      <a class="navbar-brand visible-xs" href="#">eComm</a>
+      <a class="navbar-brand hidden-xs" ui-sref="home"><img src="assets/images/eComm_logo.png"></a>
+      <a class="navbar-brand visible-xs" ui-sref="home">eComm</a>
     </div><!-- navbar-header -->
     
     <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
       <ul class="nav navbar-nav">
-        <li ng-repeat="item in NavbarCtrl.items"><a href="{{item.reference}}">{{item.title}}</a></li>
+        <li ng-repeat="item in NavbarCtrl.items"><a ui-sref="{{item.state}}">{{item.title}}</a></li>
         
       </ul>
     </div><!-- /.navbar-collapse -->

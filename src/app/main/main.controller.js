@@ -2,46 +2,35 @@
   'use strict';
 
   angular
-    .module('mainCarousel')
-    .controller('mainCarouselController',mainCarouselController);
+    .module('main')
+    .controller('CarouselController',CarouselController)
+    .controller('NavbarController',NavbarController)
+    .controller('HotOffersController',HotOffersController);
  
-  function mainCarouselController(mainCarouselService){
+
+  function CarouselController(CarouselService){
     var vm = this;
-    vm.myInterval = 3000;
+    vm.setInterval = 3000;
     vm.noWrapSlides = false;
-    mainCarouselService.getCarousel(function(data) {
+    CarouselService.getCarousel(function(data) {
       vm.slides = data;
     });
   }
 
 
-
-  angular
-    .module('mainNavbar')
-    .controller('mainNavbarController',mainNavbarController);
-    
-    function mainNavbarController(mainNavbarService){
-      var vm = this;
-      mainNavbarService.getNavbar(function(data) {
-        vm.items = data;
-      });
-    }
+  function NavbarController(NavbarService){
+    var vm = this;
+    NavbarService.getNavbar(function(data) {
+      vm.items = data;
+    });
+  }
          
   
-
-  angular
-    .module('mainHotOffers')
-    .controller('mainHotOffersController',mainHotOffersController);
-    
-    function mainHotOffersController($http){
-      var vm = this;
-      $http.get('api/main/hotoffers')
-        .success( function(data) {
-          vm.hotoffers = data;
-        })
-        .error( function(data, status, headers, config) {
-          alert('data: '+ data + '| status: '+status+' |Headers: '+headers+' |config: '+config);
-      });
-    }
+  function HotOffersController(SpecialProductsService){
+    var vm = this;
+    SpecialProductsService.getHotOffers(function(data) {
+      vm.hotoffers = data;
+    });
+  }
 
 })();

@@ -1,212 +1,215 @@
-<div ng-include="'app/components/navbar/mainnavbar.html'"></div>
+<div ng-app"main">
+  <div ng-include="'app/components/navbar/mainnavbar.html'"></div>
 
-<div ng-include="'app/components/carousel/maincarousel.html'"></div>
+  <div ng-include="'app/components/carousel/maincarousel.html'"></div>
 
-<div ng-include="'app/components/search/search.html'"></div>
+  <div ng-include="'app/components/search/search.html'"></div>
 
-<div class="container">
-   <div ng-app="mainHotOffers" ng-controller="mainHotOffersController as mainHotOffersCtrl" class="row hot-offers">
-    <div class="col-md-12">
-      <div class="tabbable-panel">
-        <div class="tabbable-line">
-          <ul class="nav nav-tabs ">
-            <li class="active">
-              <a href="#tab_default_1" data-toggle="tab"><span class="glyphicon glyphicon-fire"></span> Hot Offers</a>
-            </li>
-            <li>
-              <a href="#tab_default_2" data-toggle="tab"><span class="glyphicon glyphicon-check"></span> New Products</a>
-            </li>
-            <li>
-              <a href="#tab_default_3" data-toggle="tab"><span class="glyphicon glyphicon-arrow-up"></span> Top Picks</a>
-            </li>
-            <li>
-              <a href="#tab_default_4" data-toggle="tab"><span class="glyphicon glyphicon-bullhorn"></span> Clearance</a>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active" id="tab_default_1">
-              <div class="row">
-                <div class="col-md-12 offer">
-                  <div id="Carousel" class="carousel slide">
+  <div class="container">
+    <div class="row hot-offers" ng-controller="HotOffersController as HotOffersCtrl" >
+      <div class="col-md-12">
+        <div class="tabbable-panel">
+          <div class="tabbable-line">
+            <ul class="nav nav-tabs ">
+              <li class="active">
+                <a href="#tab_default_1" data-toggle="tab"><span class="glyphicon glyphicon-fire"></span> Hot Offers</a>
+              </li>
+              <li>
+                <a href="#tab_default_2" data-toggle="tab"><span class="glyphicon glyphicon-check"></span> New Products</a>
+              </li>
+              <li>
+                <a href="#tab_default_3" data-toggle="tab"><span class="glyphicon glyphicon-arrow-up"></span> Top Picks</a>
+              </li>
+              <li>
+                <a href="#tab_default_4" data-toggle="tab"><span class="glyphicon glyphicon-bullhorn"></span> Clearance</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab_default_1">
+                <div class="row">
+                  <div class="col-md-12 offer">
+                    <div id="Carousel" class="carousel slide">
 
-                    <ol class="carousel-indicators">
-                      <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#Carousel" data-slide-to="1"></li>
-                    </ol>
+                      <ol class="carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                      </ol>
 
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <div class="row">
-                          <div class="col-md-3" ng-repeat="hotoffer in mainHotOffersCtrl.hotoffers | orderBy: name | limitTo: 4"><a href="#" class="thumbnail">{{hotoffer.name}}<img src="{{hotoffer.imageUrl}}" alt="{{hotoffer.name}}" style="width: 150px; height: 150px;">{{hotoffer.price}}</a></div>
-                        </div><!--.row-->
-                      </div><!--.item-->
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <div class="row">
+                            <div class="col-md-3" ng-repeat="hotoffer in HotOffersCtrl.hotoffers | orderBy: name | limitTo: 4"><a href="#" class="thumbnail">{{hotoffer.name}}<img src="{{hotoffer.imageUrl}}" alt="{{hotoffer.name}}">{{hotoffer.price}}</a></div>
+                          </div><!--.row-->
+                        </div><!--.item-->
 
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        </div><!--.row-->
-                      </div><!--.item-->
+                        <div class="item">
+                          <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                          </div><!--.row-->
+                        </div><!--.item-->
 
-                    </div><!--.carousel-inner-->
-                    <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                    <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                  </div><!-- /.Carousel-->
+                      </div><!--.carousel-inner-->
+                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                    </div><!-- /.Carousel-->
+                  </div>
                 </div>
-              </div>
-            </div> <!-- /#tab_default_1 -->
-            
-            <div class="tab-pane" id="tab_default_2">
-              <div class="row">
-                <div class="col-md-12 offer">
-                  <div id="Carousel" class="carousel slide">
+              </div> <!-- /#tab_default_1 -->
+              
+              <div class="tab-pane" id="tab_default_2">
+                <div class="row">
+                  <div class="col-md-12 offer">
+                    <div id="Carousel" class="carousel slide">
 
-                    <ol class="carousel-indicators">
-                      <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#Carousel" data-slide-to="1"></li>
-                    </ol>
+                      <ol class="carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                      </ol>
 
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <div class="row">
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        </div><!--.row-->
-                      </div><!--.item-->
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
+                          </div><!--.row-->
+                        </div><!--.item-->
 
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        </div><!--.row-->
-                      </div><!--.item-->
+                        <div class="item">
+                          <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                          </div><!--.row-->
+                        </div><!--.item-->
 
-                    </div><!--.carousel-inner-->
-                    <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                    <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                  </div><!--.Carousel-->
+                      </div><!--.carousel-inner-->
+                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                    </div><!--.Carousel-->
+                  </div>
                 </div>
-              </div>
-            </div> <!-- /#tab_default_2 -->
+              </div> <!-- /#tab_default_2 -->
 
-            <div class="tab-pane" id="tab_default_3">
-              <div class="row">
-                <div class="col-md-12 offer">
-                  <div id="Carousel" class="carousel slide">
+              <div class="tab-pane" id="tab_default_3">
+                <div class="row">
+                  <div class="col-md-12 offer">
+                    <div id="Carousel" class="carousel slide">
 
-                    <ol class="carousel-indicators">
-                      <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#Carousel" data-slide-to="1"></li>
-                    </ol>
+                      <ol class="carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                      </ol>
 
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <div class="row">
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        </div><!--.row-->
-                      </div><!--.item-->
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
+                          </div><!--.row-->
+                        </div><!--.item-->
 
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        </div><!--.row-->
-                      </div><!--.item-->
+                        <div class="item">
+                          <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                          </div><!--.row-->
+                        </div><!--.item-->
 
-                    </div><!--.carousel-inner-->
-                    <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                    <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                  </div><!--.Carousel-->
+                      </div><!--.carousel-inner-->
+                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                    </div><!--.Carousel-->
+                  </div>
                 </div>
-              </div>
-            </div> <!-- /#tab_default_3 -->
+              </div> <!-- /#tab_default_3 -->
 
-            <div class="tab-pane" id="tab_default_4">
-              <div class="row">
-                <div class="col-md-12 offer">
-                  <div id="Carousel" class="carousel slide">
+              <div class="tab-pane" id="tab_default_4">
+                <div class="row">
+                  <div class="col-md-12 offer">
+                    <div id="Carousel" class="carousel slide">
 
-                    <ol class="carousel-indicators">
-                      <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#Carousel" data-slide-to="1"></li>
-                    </ol>
+                      <ol class="carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                      </ol>
 
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <div class="row">
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        </div><!--.row-->
-                      </div><!--.item-->
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
+                          </div><!--.row-->
+                        </div><!--.item-->
 
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        </div><!--.row-->
-                      </div><!--.item-->
+                        <div class="item">
+                          <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
+                          </div><!--.row-->
+                        </div><!--.item-->
 
-                    </div><!--.carousel-inner-->
-                    <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                    <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                  </div><!--.Carousel-->
+                      </div><!--.carousel-inner-->
+                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                    </div><!--.Carousel-->
+                  </div>
                 </div>
-              </div>
-            </div> <!-- /#tab_default_4 -->
+              </div> <!-- /#tab_default_4 -->
 
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div> <!-- /.hot-offers -->
+    </div> <!-- /.hot-offers -->
 
-  <div class="row" id="tiles">
-    <div class="col-md-6">
-      <div class="tile1">
-        <img src="assets/images/cloth-products.jpg" ><div class="band"><span>Cloth</span></div>
+    <div class="row" id="tiles">
+      <div class="col-md-6">
+        <div class="tile1">
+          <img src="assets/images/cloth-products.jpg" ><div class="band"><span>Cloth</span></div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="tile2">
-            <img src="assets/images/e-products1.png" ><div class="band"><span>Electronic</span></div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="tile2">
+              <img src="assets/images/e-products1.png" ><div class="band"><span>Electronic</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="tile3">
+              <img src="assets/images/baby-products.jpg" ><div class="band"><span>Baby</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tile4">
+              <img src="assets/images/food-products.jpg" ><div class="band"><span>Food</span></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="tile3">
-            <img src="assets/images/baby-products.jpg" ><div class="band"><span>Baby</span></div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile4">
-            <img src="assets/images/food-products.jpg" ><div class="band"><span>Food</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> <!-- /.tiles -->
-</div> <!-- /.container -->
+    </div> <!-- /.tiles -->
+  </div> <!-- /.container -->
 
-<div ng-include="'app/components/footer/footer.html'"></div>
+  <div ng-include="'app/components/footer/footer.html'"></div>
+
+</div><!-- end of "main" module

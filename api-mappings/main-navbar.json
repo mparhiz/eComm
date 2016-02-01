@@ -1,27 +1,27 @@
 [
   {
     "title": "Home",
-    "reference": "#home",
+    "state": "home",
     "status": "active"
   },
   {
     "title": "Products",
-    "reference": "#products",
+    "state": "home.products",
     "status": "none"
   },
   {
     "title": "Sale",
-    "reference": "#sale",
+    "state": "home.sale",
     "status": "none"
   },
   {
     "title": "About Us",
-    "reference": "#about",
+    "state": "home.about",
     "status": "none"
   },
   {
     "title": "Contact Us",
-    "reference": "#contact",
+    "state": "home.contact",
     "status": "none"
   }
 ]
