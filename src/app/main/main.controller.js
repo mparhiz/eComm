@@ -8,7 +8,7 @@
   function mainCarouselController(mainCarouselService){
     var vm = this;
     vm.myInterval = 3000;
-
+    vm.noWrapSlides = false;
     mainCarouselService.getCarousel(function(data) {
       vm.slides = data;
     });
