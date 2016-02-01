@@ -1,8 +1,8 @@
 (function() {
-  'use strict';
-
-  angular
-    .module('eComm')
-    .constant('moment', moment);
-
+	'use strict';
+/*
+	angular
+		.module('eComm')
+		.constant('moment', moment);
+*/
 })();
