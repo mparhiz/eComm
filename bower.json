@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "angular-ui-router": "~0.2.15",
-    "angular-bootstrap": "~0.13.4",
+    "angular-bootstrap": "~1.1.2",
     "animate.css": "~3.4.0",
     "angular": "~1.4.9",
     "angular-animate": "~1.4.9",
