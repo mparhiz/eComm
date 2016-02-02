@@ -14,7 +14,7 @@
       })
       .state('home.products', {
         url: '/products',
-        templateUrl: 'app/main/products.html',
+        templateUrl: 'app/products/products.html',
         params: {
           type: null
         }

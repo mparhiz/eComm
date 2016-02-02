@@ -8,27 +8,27 @@
     .controller('HotOffersController',HotOffersController);
  
 
-  function CarouselController(CarouselService){
+  function CarouselController(getData){
     var vm = this;
     vm.setInterval = 3000;
     vm.noWrapSlides = false;
-    CarouselService.getCarousel(function(data) {
+    getData.fetch('api/main/carousel').then( function(data) {
       vm.slides = data;
     });
   }
 
 
-  function NavbarController(NavbarService){
+  function NavbarController(getData){
     var vm = this;
-    NavbarService.getNavbar(function(data) {
+    getData.fetch('api/main/navbar').then( function(data) {
       vm.items = data;
     });
   }
          
   
-  function HotOffersController(SpecialProductsService){
+  function HotOffersController(getData){
     var vm = this;
-    SpecialProductsService.getHotOffers(function(data) {
+    getData.fetch('api/main/hotoffers').then( function(data) {
       vm.hotoffers = data;
     });
   }

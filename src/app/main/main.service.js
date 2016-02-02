@@ -3,32 +3,20 @@
 
   angular
     .module('main')
-    .factory('CarouselService', CarouselService)
-    .factory('NavbarService', NavbarService)
-    .factory('SpecialProductsService', SpecialProductsService);
+    .service('getData',getData);
 
-  function CarouselService($http) {
+  function getData($http, $log) {
     return {
-      getCarousel: function(callback) {
-        $http.get('api/main/carousel').success(callback);
-      }
-    }
-  }
-
-
-  function NavbarService($http) {
-    return {
-      getNavbar: function(callback) {
-        $http.get('api/main/navbar').success(callback);
-      }
-    }
-  }
-
-
-  function SpecialProductsService($http) {
-    return {
-      getHotOffers: function(callback) {
-        $http.get('api/main/hotoffers').success(callback);
+      fetch: function(_url_){
+        return $http({
+          method: 'GET',
+          url: _url_
+        })
+        .then(function succssCallback(response){
+          return response.data
+        }, function errorCallback(response){
+          $log.error("status: " + response.status);
+        });
       }
     }
   }
