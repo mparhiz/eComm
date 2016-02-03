@@ -18,11 +18,18 @@
   }
 
 
-  function NavbarController(getData){
+  function NavbarController($scope, getData){
     var vm = this;
+    $scope.navCollapsed = true;
+    vm.toggleNavbar = toggleNavbar;
+    
     getData.fetch('api/main/navbar').then( function(data) {
       vm.items = data;
     });
+
+    function toggleNavbar(){
+      $scope.navCollapsed = !$scope.navCollapsed;
+    }
   }
          
   
