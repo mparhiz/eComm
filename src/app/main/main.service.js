@@ -3,7 +3,7 @@
 
   angular
     .module('main')
-    .service('getData',getData);
+      .service('getData',getData);
 
   function getData($http, $log) {
     return {

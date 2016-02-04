@@ -1,0 +1,43 @@
+<div id="productSlider" ng-controller="ProductSliderController as ProductSliderCtrl">
+  <div id="Carousel" class="carousel slide">
+
+    <ol class="carousel-indicators">
+      <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#Carousel" data-slide-to="1"></li>
+    </ol>
+
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <div class="row">
+          <div class="col-md-3" ng-repeat="product in ProductSliderCtrl.products | orderBy: name | limitTo: 4">
+
+            <div class="block">
+              <a href="#" >
+                <h3>{{product.name}}</h3>
+                <img src="{{product.imageUrl}}" alt="{{product.name}}"><br>
+                <strong>{{product.price | currency}}</strong><br>
+                <button class="btn btn-default" data-ng-click="" >Buy Me!</button>
+                <button class="btn btn-default" data-ng-click=""><img src="assets/images/add-to-card-icon.png"></button>
+              </a>
+            </div>
+
+          </div>
+        </div><!--.row-->
+      </div><!--.item-->
+
+      <div class="item">
+        <div class="row">
+          <h1>
+            Second Tab
+          </h1>
+        </div><!--.row-->
+      </div><!--.item-->
+
+    </div><!--.carousel-inner-->
+
+    <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+    <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+
+  </div><!-- /.Carousel-->
+</div>

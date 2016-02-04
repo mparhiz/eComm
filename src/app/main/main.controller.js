@@ -3,35 +3,7 @@
 
   angular
     .module('main')
-    .controller('CarouselController',CarouselController)
-    .controller('NavbarController',NavbarController)
     .controller('HotOffersController',HotOffersController);
-
-
-  function CarouselController(getData){
-    var vm = this;
-    vm.setInterval = 3000;
-    vm.noWrapSlides = false;
-    getData.fetch('api/main/carousel').then( function(data) {
-      vm.slides = data;
-    });
-  }
-
-
-  function NavbarController($scope, getData){
-    var vm = this;
-    $scope.navCollapsed = true;
-    vm.toggleNavbar = toggleNavbar;
-
-    getData.fetch('api/main/navbar').then( function(data) {
-      vm.items = data;
-    });
-
-    function toggleNavbar(){
-      $scope.navCollapsed = !$scope.navCollapsed;
-    }
-  }
-
 
   function HotOffersController(getData){
     var vm = this;

@@ -10,11 +10,11 @@
       <a class="navbar-brand hidden-xs" ui-sref="home"><img src="assets/images/eComm_logo.png"></a>
       <a class="navbar-brand visible-xs" ui-sref="home">eComm</a>
     </div><!-- navbar-header -->
-   
+
     <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
       <ul class="nav navbar-nav">
         <li ng-repeat="item in NavbarCtrl.items"><a ui-sref="{{item.state}}">{{item.title}}</a></li>
-        
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </nav>

@@ -2,8 +2,6 @@
   'use strict';
 
   angular
-   .module('main', []);
+   .module('main', ['navbar', 'carousel', 'productslider']);
 
 })();
-
-
