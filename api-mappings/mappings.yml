@@ -20,7 +20,7 @@
     method: GET
   response:
     status: 200
-    file: "main-navbar.json" 
+    file: "main-navbar.json"
 
 ##############################################################################
 #
@@ -32,7 +32,7 @@
     method: GET
   response:
     status: 200
-    file: "main-carousel.json" 
+    file: "main-carousel.json"
 
 #######################################################################
 #
@@ -46,9 +46,41 @@
     status: 200
     file: "main-hotoffers.json"
 
+#######################################################################
+#
+# Retrieving the list of Top Picks for showing on the main page.
+#
+#######################################################################
+- request:
+    url: /api/main/toppicks
+    method: GET
+  response:
+    status: 200
+    file: "main-toppicks.json"
 
+#######################################################################
+#
+# Retrieving the list of New Products for showing on the main page.
+#
+#######################################################################
+- request:
+    url: /api/main/newproducts
+    method: GET
+  response:
+    status: 200
+    file: "main-newproducts.json"
 
-
+#######################################################################
+#
+# Retrieving the list of Clearance for showing on the main page.
+#
+#######################################################################
+- request:
+    url: /api/main/clearances
+    method: GET
+  response:
+    status: 200
+    file: "main-clearances.json"
 
 #- request:
 #    url: /api/users

@@ -1,0 +1,39 @@
+[
+  {
+    "id" : "1101",
+    "name" : "Princes Doll",
+    "category" : "Toy",
+    "subCategory": "Doll",
+    "availableDate" : "2015-01-01T00:00:00.000Z",
+    "price" : 29.99,
+    "imageUrl" : "app/main/Products_imgs/1101.jpg"
+  },
+  {
+    "id" : "1102",
+    "name" : "Blocks",
+    "category" : "Toy",
+    "subCategory": "Puzzle",
+    "availableDate" : "2015-02-30T00:00:00.000Z",
+    "price" : 39.99,
+    "imageUrl" : "app/main/Products_imgs/1102.jpg"
+  },
+  {
+    "id" : "1201",
+    "name" : "ASUS 15.6",
+    "category" : "Electronic",
+    "subCategory": "Computer",
+    "availableDate" : "2015-05-30T00:00:00.000Z",
+    "price" : 300.00,
+    "imageUrl" : "app/main/Products_imgs/1201.jpg"
+  },
+  {
+    "id" : "1301",
+    "name" : "LG 42",
+    "category" : "Electronic",
+    "subCategory": "TV",
+    "availableDate" : "2015-12-07T00:00:00.000Z",
+    "price" : 99.99,
+    "imageUrl" : "app/main/Products_imgs/1301.jpg"
+  }
+]
+

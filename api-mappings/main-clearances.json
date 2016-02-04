@@ -1,0 +1,39 @@
+[
+  {
+    "id" : "1201",
+    "name" : "ASUS 15.6",
+    "category" : "Electronic",
+    "subCategory": "Computer",
+    "availableDate" : "2015-05-30T00:00:00.000Z",
+    "price" : 300.00,
+    "imageUrl" : "app/main/Products_imgs/1201.jpg"
+  },
+  {
+    "id" : "1301",
+    "name" : "LG 42",
+    "category" : "Electronic",
+    "subCategory": "TV",
+    "availableDate" : "2015-12-07T00:00:00.000Z",
+    "price" : 99.99,
+    "imageUrl" : "app/main/Products_imgs/1301.jpg"
+  },
+  {
+    "id" : "1003",
+    "name" : "Socks",
+    "category" : "Cloth",
+    "subCategory": "Baby",
+    "availableDate" : "2015-09-08T00:00:00.000Z",
+    "price" : 20.50,
+    "imageUrl" : "app/main/Products_imgs/1003.jpg"
+  },
+  {
+    "id" : "1004",
+    "name" : "Shoes",
+    "category" : "Cloth",
+    "subCategory": "Baby",
+    "availableDate" : "2015-10-30T00:00:00.000Z",
+    "price" : 31.00,
+    "imageUrl" : "app/main/Products_imgs/1004.jpg"
+  }
+]
+

@@ -7,177 +7,202 @@
 
   <div class="container">
     <div class="row hot-offers" ng-controller="HotOffersController as HotOffersCtrl" >
-      <div class="col-md-12">
-        <div class="tabbable-panel">
-          <div class="tabbable-line">
-            <ul class="nav nav-tabs ">
-              <li class="active">
-                <a href="#tab_default_1" data-toggle="tab"><span class="glyphicon glyphicon-fire"></span> Hot Offers</a>
-              </li>
-              <li>
-                <a href="#tab_default_2" data-toggle="tab"><span class="glyphicon glyphicon-check"></span> New Products</a>
-              </li>
-              <li>
-                <a href="#tab_default_3" data-toggle="tab"><span class="glyphicon glyphicon-arrow-up"></span> Top Picks</a>
-              </li>
-              <li>
-                <a href="#tab_default_4" data-toggle="tab"><span class="glyphicon glyphicon-bullhorn"></span> Clearance</a>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane active" id="tab_default_1">
-                <div class="row">
-                  <div class="col-md-12 offer">
-                    <div id="Carousel" class="carousel slide">
 
-                      <ol class="carousel-indicators">
-                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#Carousel" data-slide-to="1"></li>
-                      </ol>
+      <div id="productSlider">
+        <uib-tabset justified="true">
 
-                      <!-- Carousel items -->
-                      <div class="carousel-inner">
-                        <div class="item active">
-                          <div class="row">
-                            <div class="col-md-3" ng-repeat="hotoffer in HotOffersCtrl.hotoffers | orderBy: name | limitTo: 4"><a href="#" class="thumbnail">{{hotoffer.name}}<img src="{{hotoffer.imageUrl}}" alt="{{hotoffer.name}}">{{hotoffer.price}}</a></div>
-                          </div><!--.row-->
-                        </div><!--.item-->
+          <uib-tab class="active">
+            <uib-tab-heading>
+              <i class="glyphicon glyphicon-fire"></i> Hot Offers
+            </uib-tab-heading>
 
-                        <div class="item">
-                          <div class="row">
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          </div><!--.row-->
-                        </div><!--.item-->
+            <div id="Carousel" class="carousel slide">
 
-                      </div><!--.carousel-inner-->
-                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                    </div><!-- /.Carousel-->
-                  </div>
-                </div>
-              </div> <!-- /#tab_default_1 -->
-              
-              <div class="tab-pane" id="tab_default_2">
-                <div class="row">
-                  <div class="col-md-12 offer">
-                    <div id="Carousel" class="carousel slide">
+              <ol class="carousel-indicators">
+                <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#Carousel" data-slide-to="1"></li>
+              </ol>
 
-                      <ol class="carousel-indicators">
-                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#Carousel" data-slide-to="1"></li>
-                      </ol>
+              <div class="carousel-inner">
 
-                      <!-- Carousel items -->
-                      <div class="carousel-inner">
-                        <div class="item active">
-                          <div class="row">
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          </div><!--.row-->
-                        </div><!--.item-->
+                <div class="item active">
+                  <div class="row">
+                    <div class="col-md-3" ng-repeat="hotoffer in HotOffersCtrl.hotoffers | orderBy: name | limitTo: 4">
 
-                        <div class="item">
-                          <div class="row">
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          </div><!--.row-->
-                        </div><!--.item-->
+                      <div class="block">
+                        <a href="#" >
+                          <h3>{{hotoffer.name}}</h3>
+                          <img src="{{hotoffer.imageUrl}}" alt="{{hotoffer.name}}"><br>
+                          <strong>{{hotoffer.price | currency}}</strong><br>
+                          <button class="btn btn-default" data-ng-click="" >Buy Me!</button>
+                          <button class="btn btn-default" data-ng-click=""><img src="assets/images/add-to-card-icon.png"></button>
+                        </a>
+                      </div>
 
-                      </div><!--.carousel-inner-->
-                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                    </div><!--.Carousel-->
-                  </div>
-                </div>
-              </div> <!-- /#tab_default_2 -->
+                    </div>
+                  </div><!--.row-->
+                </div><!--.item-->
 
-              <div class="tab-pane" id="tab_default_3">
-                <div class="row">
-                  <div class="col-md-12 offer">
-                    <div id="Carousel" class="carousel slide">
+                <div class="item">
+                  <div class="row">
+                    <h1>
+                      Second Tab
+                    </h1>
+                  </div><!--.row-->
+                </div><!--.item-->
 
-                      <ol class="carousel-indicators">
-                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#Carousel" data-slide-to="1"></li>
-                      </ol>
+              </div><!--.carousel-inner-->
 
-                      <!-- Carousel items -->
-                      <div class="carousel-inner">
-                        <div class="item active">
-                          <div class="row">
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          </div><!--.row-->
-                        </div><!--.item-->
+              <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+              <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
 
-                        <div class="item">
-                          <div class="row">
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          </div><!--.row-->
-                        </div><!--.item-->
+            </div><!-- /.Carousel-->
 
-                      </div><!--.carousel-inner-->
-                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                    </div><!--.Carousel-->
-                  </div>
-                </div>
-              </div> <!-- /#tab_default_3 -->
+          </uib-tab>
+          <uib-tab>
+            <uib-tab-heading>
+              <i class="glyphicon glyphicon-check"></i> New Products
+            </uib-tab-heading>
+            <div id="Carousel" class="carousel slide">
 
-              <div class="tab-pane" id="tab_default_4">
-                <div class="row">
-                  <div class="col-md-12 offer">
-                    <div id="Carousel" class="carousel slide">
+              <ol class="carousel-indicators">
+                <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#Carousel" data-slide-to="1"></li>
+              </ol>
 
-                      <ol class="carousel-indicators">
-                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#Carousel" data-slide-to="1"></li>
-                      </ol>
+              <div class="carousel-inner">
 
-                      <!-- Carousel items -->
-                      <div class="carousel-inner">
-                        <div class="item active">
-                          <div class="row">
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1401.png" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1004.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1301.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          </div><!--.row-->
-                        </div><!--.item-->
+                <div class="item active">
+                  <div class="row">
+                    <div class="col-md-3" ng-repeat="newproduct in HotOffersCtrl.newproducts | orderBy: name | limitTo: 4">
 
-                        <div class="item">
-                          <div class="row">
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="app/main/Products_imgs/1201.jpg" alt="Image" style="max-width:100%;"></a></div>
-                          </div><!--.row-->
-                        </div><!--.item-->
+                      <div class="block">
+                        <a href="#" >
+                          <h3>{{newproduct.name}}</h3>
+                          <img src="{{newproduct.imageUrl}}" alt="{{newproduct.name}}"><br>
+                          <strong>{{newproduct.price | currency}}</strong><br>
+                          <button class="btn btn-default" data-ng-click="" >Buy Me!</button>
+                          <button class="btn btn-default" data-ng-click=""><img src="assets/images/add-to-card-icon.png"></button>
+                        </a>
+                      </div>
 
-                      </div><!--.carousel-inner-->
-                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                    </div><!--.Carousel-->
-                  </div>
-                </div>
-              </div> <!-- /#tab_default_4 -->
+                    </div>
+                  </div><!--.row-->
+                </div><!--.item-->
 
-            </div>
-          </div>
-        </div>
+                <div class="item">
+                  <div class="row">
+                    <h1>
+                      second tab
+                    </h1>
+                  </div><!--.row-->
+                </div><!--.item-->
+
+              </div><!--.carousel-inner-->
+
+              <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+              <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+
+            </div><!-- /.Carousel-->
+
+          </uib-tab>
+          <uib-tab>
+            <uib-tab-heading>
+              <i class="glyphicon glyphicon-arrow-up"></i> Top Picks
+            </uib-tab-heading>
+            <div id="Carousel" class="carousel slide">
+
+              <ol class="carousel-indicators">
+                <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#Carousel" data-slide-to="1"></li>
+              </ol>
+
+              <div class="carousel-inner">
+
+                <div class="item active">
+                  <div class="row">
+                    <div class="col-md-3" ng-repeat="toppick in HotOffersCtrl.toppicks | orderBy: name | limitTo: 4">
+
+                      <div class="block">
+                        <a href="#" >
+                          <h3>{{toppick.name}}</h3>
+                          <img src="{{toppick.imageUrl}}" alt="{{toppick.name}}"><br>
+                          <strong>{{toppick.price | currency}}</strong><br>
+                          <button class="btn btn-default" data-ng-click="" >Buy Me!</button>
+                          <button class="btn btn-default" data-ng-click=""><img src="assets/images/add-to-card-icon.png"></button>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div><!--.row-->
+                </div><!--.item-->
+
+                <div class="item">
+                  <div class="row">
+                    <h1>
+                      Second tab
+                    </h1>
+                  </div><!--.row-->
+                </div><!--.item-->
+
+              </div><!--.carousel-inner-->
+
+              <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+              <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+
+            </div><!-- /.Carousel-->
+
+          </uib-tab>
+          <uib-tab>
+            <uib-tab-heading>
+              <i class="glyphicon glyphicon-bullhorn"></i> Clearance
+            </uib-tab-heading>
+            <div id="Carousel" class="carousel slide">
+
+              <ol class="carousel-indicators">
+                <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#Carousel" data-slide-to="1"></li>
+              </ol>
+
+              <div class="carousel-inner">
+
+                <div class="item active">
+                  <div class="row">
+                    <div class="col-md-3" ng-repeat="clearance in HotOffersCtrl.clearances | orderBy: name | limitTo: 4">
+
+                      <div class="block">
+                        <a href="#" >
+                          <h3>{{clearance.name}}</h3>
+                          <img src="{{clearance.imageUrl}}" alt="{{clearance.name}}"><br>
+                          <strong>{{clearance.price | currency}}</strong><br>
+                          <button class="btn btn-default" data-ng-click="" >Buy Me!</button>
+                          <button class="btn btn-default" data-ng-click=""><img src="assets/images/add-to-card-icon.png"></button>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div><!--.row-->
+                </div><!--.item-->
+
+                <div class="item">
+                  <div class="row">
+                    <h1>
+                      Second tab
+                    </h1>
+                  </div><!--.row-->
+                </div><!--.item-->
+
+              </div><!--.carousel-inner-->
+
+              <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+              <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+
+            </div><!-- /.Carousel-->
+
+          </uib-tab>
+        </uib-tabset>
       </div>
+
     </div> <!-- /.hot-offers -->
 
     <div class="row" id="tiles">
