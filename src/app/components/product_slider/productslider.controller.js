@@ -11,8 +11,6 @@
     ProductSliderService.getData($scope.url_).then( function(productData) {
       vm.products = productData;
     });
-
   }
 
 })();
-

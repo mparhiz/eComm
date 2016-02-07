@@ -12,32 +12,25 @@
         <div class="row">
           <div class="col-md-3" ng-repeat="product in ProductSliderCtrl.products | orderBy: name | limitTo: 4">
 
-            <div class="block">
-              <a href="#" >
-                <h3>{{product.name}}</h3>
-                <img src="{{product.imageUrl}}" alt="{{product.name}}"><br>
-                <strong>{{product.price | currency}}</strong><br>
-                <button class="btn btn-default" data-ng-click="" >Buy Me!</button>
-                <button class="btn btn-default" data-ng-click=""><img src="assets/images/add-to-card-icon.png"></button>
-              </a>
-            </div>
+            <ec-product-tile-directive item="product"></ec-product-tile-directive>
+
 
           </div>
-        </div><!--.row-->
-      </div><!--.item-->
+        </div>
+      </div>
 
       <div class="item">
         <div class="row">
           <h1>
             Second Tab
           </h1>
-        </div><!--.row-->
-      </div><!--.item-->
+        </div>
+      </div>
 
-    </div><!--.carousel-inner-->
-
+    </div>
     <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
     <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
 
-  </div><!-- /.Carousel-->
+  </div>
 </div>
+
