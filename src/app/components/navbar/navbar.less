@@ -1,33 +1,67 @@
-.navbar{
-  background-color: fadeout(#77AFA9, 20%); //rgba(119,175,169,.8);
-  overflow: auto;
-  position: absolute;
-  border: 0;
-  /*height: 130px;*/
-  width: 100%;
-  top: 20px;
-  z-index: 1;
+#mainNav{
 
-  .navbar-brand {
-    img{
-      height: 100px;
-      width: auto;
-      margin-left: 30%;
-      margin-right: 20px;
+  .navbar-fixed-top {
+    position: absolute;
+    background-color: fadeout(#77AFA9, 20%); //rgba(119,175,169,.8);
+    border: 0;
+    top: 20px;
+
+    .navbar-header{
+      .navbar-brand {
+          img{
+            height: 100px;
+            width: auto;
+          }
+      }
+
+      #logo{
+        color: #000 !important;
+        font-size: 200%;
+        font-weight: 900;
+      }
+    }
+
+    &.ui-scrollfix {
+      position: fixed;
+      top: 0;
+      img{
+        visibility: hidden;
+      }
+
+      #logo{
+        display: block !important;
+        color: #000 !important;
+        font-size: 200%;
+        font-weight: 900;
+      }
+
+      .nav{
+        margin-top: 0;
+      }
+    }
+
+    .nav{
+      margin-top: 77px;
+
+      & > li > a {
+        color: black !important;
+      }
+
+      &.active{
+        background-color: transparent;
+      }
+
+      & > li > a:hover,
+      & > li > a:focus{
+        color: #fff !important;
+        background-color: transparent;
+      }
     }
   }
 
-  .nav{
-    margin-top: 77px;
+  #mainNav-1.ui-scrollfix {
+    position: fixed;
+    top: 20px;
   }
 
-  .navbar-nav > li > a {
-    color: black !important;
-  }
-
-  .navbar-nav > li > a:hover,
-  .navbar-nav > li > a:focus{
-    color: #fff !important;
-    background-color: transparent;
-  }
 }
