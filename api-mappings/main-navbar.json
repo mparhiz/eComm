@@ -6,22 +6,22 @@
   },
   {
     "title": "Products",
-    "state": "home.products",
+    "state": "products",
     "status": "none"
   },
   {
     "title": "Sale",
-    "state": "home.sale",
+    "state": "sale",
     "status": "none"
   },
   {
     "title": "About Us",
-    "state": "home.about",
+    "state": "about",
     "status": "none"
   },
   {
     "title": "Contact Us",
-    "state": "home.contact",
+    "state": "contact",
     "status": "none"
   }
 ]

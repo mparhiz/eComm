@@ -5,9 +5,9 @@
     .module('navbar')
     .controller('NavbarController', NavbarController);
 
-  function NavbarController($scope, NavbarService) {
+  function NavbarController(NavbarService) {
     var vm = this;
-    $scope.navCollapsed = true;
+    vm.navCollapsed = true;
     vm.toggleNavbar = toggleNavbar;
 
     NavbarService.getData('api/main/navbar').then( function(navbarData) {
@@ -15,7 +15,7 @@
     });
 
     function toggleNavbar(){
-      $scope.navCollapsed = !$scope.navCollapsed;
+      vm.navCollapsed = !vm.navCollapsed;
     }
   }
 

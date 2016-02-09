@@ -12,27 +12,27 @@
         url: '/',
         templateUrl: 'app/main/main.html'
       })
-      .state('home.products', {
+      .state('products', {
         url: '/products',
         templateUrl: 'app/products/products.html',
         params: {
           type: null
         }
       })
-      .state('home.sale', {
+      .state('sale', {
         url: '/sale',
-        templateUrl: 'app/main/sale.html',
+        templateUrl: 'app/sale/sale.html',
         params: {
           type: null
         }
       })
-      .state('home.contact', {
+      .state('contact', {
         url: '/contact',
-        templateUrl: 'app/main/contact.html'
+        templateUrl: 'app/contact/contact.html'
       })
-      .state('home.about', {
+      .state('about', {
         url: '/about',
-        templateUrl: 'app/main/about.html'
+        templateUrl: 'app/about/about.html'
       });
 
     $urlRouterProvider.otherwise('/');

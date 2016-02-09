@@ -1,4 +1,5 @@
 <div id="productSlider" ng-controller="ProductSliderController as ProductSliderCtrl">
+
   <div id="Carousel" class="carousel slide">
 
     <ol class="carousel-indicators">
@@ -13,7 +14,6 @@
           <div class="col-md-3" ng-repeat="product in ProductSliderCtrl.products | orderBy: name | limitTo: 4">
 
             <ec-product-tile-directive item="product"></ec-product-tile-directive>
-
 
           </div>
         </div>
