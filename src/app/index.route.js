@@ -11,9 +11,8 @@
       .state('home', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: function($state){
-          $state.transitionTo('home.speciadproducts');
-        }
+        controller: 'mainSpecialProductsController',
+        controllerAs: 'main'
       })
       .state('products', {
         url: '/products',
@@ -39,7 +38,7 @@
       })
       .state('home.speciadproducts', {
         url: '/speciadproducts',
-        templateUrl: 'app/components/special_products/specialProducts.html',
+        templateUrl: 'app/components/special_products/special-products.html',
         parent: 'home'
       });
 

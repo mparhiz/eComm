@@ -3,9 +3,9 @@
 
   angular
     .module('productslider')
-    .controller('ProductSliderController', ProductSliderController);
+    .controller('productSliderController', productSliderController);
 
-  function ProductSliderController(ProductSliderService, $scope) {
+  function productSliderController(ProductSliderService, $scope) {
     var vm = this;
     vm.setInterval = 3000;
     vm.noWrapSlides = false;
@@ -14,8 +14,8 @@
     //vm.tmpVal = vm.productLength / vm.pageSize;
     //vm.totalPage = (( vm.tmpVal > (vm.tmpVal | number:0))?( vm.tmpVal+1|number:0 ):(vm.tmpVal|number:0));
 
-    ProductSliderService.getData($scope.url_).then( function(productData) {
-      vm.products = productData;
+    ProductSliderService.retrieveSlides($scope.url_).then( function(products) {
+      vm.products = products;
       //vm.productLength = vm.products.length;
     });
 

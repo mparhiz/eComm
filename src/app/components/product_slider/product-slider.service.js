@@ -7,7 +7,7 @@
 
   function ProductSliderService($http) {
     return {
-      getData: function(_url_){
+      retrieveSlides: function(_url_){
         return $http.get(_url_)
         .then(function succssCallback(response){
           return response.data
