@@ -3,9 +3,9 @@
 
   angular
     .module('navbar')
-    .service('NavbarService',NavbarService);
+    .service('navbarService',navbarService);
 
-  function NavbarService($http) {
+  function navbarService($http) {
     return {
       getData: function(_url_){
         return $http.get(_url_)

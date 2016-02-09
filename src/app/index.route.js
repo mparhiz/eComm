@@ -10,7 +10,10 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/main/main.html'
+        templateUrl: 'app/main/main.html',
+        controller: function($state){
+          $state.transitionTo('home.speciadproducts');
+        }
       })
       .state('products', {
         url: '/products',
@@ -33,6 +36,11 @@
       .state('about', {
         url: '/about',
         templateUrl: 'app/about/about.html'
+      })
+      .state('home.speciadproducts', {
+        url: '/speciadproducts',
+        templateUrl: 'app/components/special_products/specialProducts.html',
+        parent: 'home'
       });
 
     $urlRouterProvider.otherwise('/');
