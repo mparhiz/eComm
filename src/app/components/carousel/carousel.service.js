@@ -3,8 +3,7 @@
 
   angular
     .module('carousel')
-    .service('CarouselService',CarouselService)
-    .constant('CAROUSEL_URL', 'api/main/carousel');
+    .service('CarouselService',CarouselService);
 
   function CarouselService($http) {
     return {

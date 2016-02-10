@@ -14,7 +14,7 @@
     //vm.tmpVal = vm.productLength / vm.pageSize;
     //vm.totalPage = (( vm.tmpVal > (vm.tmpVal | number:0))?( vm.tmpVal+1|number:0 ):(vm.tmpVal|number:0));
 
-    ProductSliderService.retrieveSlides($scope.url_).then( function(products) {
+    ProductSliderService.retrieveSlides($scope.tabUrl).then( function(products) {
       vm.products = products;
       //vm.productLength = vm.products.length;
     });
