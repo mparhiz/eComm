@@ -38,7 +38,7 @@
       })
       .state('home.speciadproducts', {
         url: '/speciadproducts',
-        templateUrl: 'app/components/special_products/specialProducts.html',
+        templateUrl: 'app/components/special_products/special-products.html',
         parent: 'home'
       });
 

@@ -3,13 +3,13 @@
 
   angular
     .module('main')
-    .directive('ecProductBlockDirective', ecProductBlockDirective);
+    .directive('ecProductBlock', ecProductBlock);
 
 
-  function ecProductBlockDirective(){
+  function ecProductBlock(){
     return {
       restrict: 'E',
-      templateUrl: 'app/components/product_block/productBlock.html',
+      templateUrl: 'app/components/product_block/product-block.html',
       replase: true,
       scope: {
         item: "="
