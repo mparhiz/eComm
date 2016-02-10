@@ -22,6 +22,7 @@ function listFiles() {
       path.join(conf.paths.src, '/app/**/*.js'),
       path.join(conf.paths.src, '/**/*.spec.js'),
       path.join(conf.paths.src, '/**/*.mock.js'),
+      path.join(conf.paths.src, '../bower_components/lodash/lodash.js')
     ])
     .concat(pathSrcHtml);
 
