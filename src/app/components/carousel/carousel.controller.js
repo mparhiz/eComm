@@ -3,9 +3,9 @@
 
   angular
     .module('carousel')
-    .controller('mainCarouselController', mainCarouselController);
+    .controller('CarouselController', CarouselController);
 
-  function mainCarouselController(CarouselService, CAROUSEL_URL){
+  function CarouselController(CarouselService, CAROUSEL_URL){
     var vm = this;
     vm.setInterval = 3000;
     vm.noWrapSlides = false;

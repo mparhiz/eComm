@@ -3,9 +3,9 @@
 
   angular
     .module('main')
-    .controller('mainSpecialProductsController',mainSpecialProductsController);
+    .controller('MainController',MainController);
 
-  function mainSpecialProductsController($state){
+  function MainController($state){
     $state.transitionTo('home.speciadproducts');
 }
 

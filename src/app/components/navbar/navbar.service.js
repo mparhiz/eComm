@@ -4,9 +4,9 @@
   angular
     .module('navbar')
     .constant('NAVBAR_URL','api/main/navbar')
-    .service('navbarService',navbarService);
+    .service('NavbarService',NavbarService);
 
-  function navbarService($http) {
+  function NavbarService($http) {
     return {
       retrieveNavbar: function(_url_){
         return $http.get(_url_)
