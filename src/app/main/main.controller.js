@@ -3,25 +3,10 @@
 
   angular
     .module('main')
-    .controller('HotOffersController',HotOffersController);
+    .controller('mainSpecialProductsController',mainSpecialProductsController);
 
-  function HotOffersController(getData){
-    var vm = this;
-    getData.fetch('api/main/hotoffers').then( function(data) {
-      vm.hotoffers = data;
-    });
-
-      getData.fetch('api/main/toppicks').then( function(data) {
-      vm.toppicks = data;
-    });
-
-    getData.fetch('api/main/newproducts').then( function(data) {
-      vm.newproducts = data;
-    });
-
-    getData.fetch('api/main/clearances').then( function(data) {
-      vm.clearances = data;
-    });
+  function mainSpecialProductsController($state){
+    $state.transitionTo('home.speciadproducts');
 }
 
 })();
