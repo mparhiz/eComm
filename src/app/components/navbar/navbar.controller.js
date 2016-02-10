@@ -3,15 +3,15 @@
 
   angular
     .module('navbar')
-    .controller('mainNavbarController', mainNavbarController);
+    .controller('NavbarController', NavbarController);
 
-  function mainNavbarController(navbarService, NAVBAR_URL) {
+  function NavbarController(navbarService) {
     var vm = this;
     vm.navCollapsed = true;
     vm.toggleNavbar = toggleNavbar;
 
-    navbarService.retrieveNavbar(NAVBAR_URL).then( function(items) {
-      vm.items = items;
+    navbarService.getData('api/main/navbar').then( function(navbarData) {
+      vm.items = navbarData;
     });
 
     function toggleNavbar(){

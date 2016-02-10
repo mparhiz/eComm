@@ -3,14 +3,14 @@
 
   angular
     .module('carousel')
-    .controller('mainCarouselController', mainCarouselController);
+    .controller('CarouselController', CarouselController);
 
-  function mainCarouselController(CarouselService, CAROUSEL_URL){
+  function CarouselController(CarouselService){
     var vm = this;
     vm.setInterval = 3000;
     vm.noWrapSlides = false;
-    CarouselService.retrieveCarousel(CAROUSEL_URL).then( function(slides) {
-      vm.slides = slides;
+    CarouselService.getData('api/main/carousel').then( function(carouselData) {
+      vm.slides = carouselData;
     });
   }
 

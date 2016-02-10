@@ -1,6 +1,6 @@
-<div id="slides_control" ng-controller="mainCarouselController as mainCarouselCtrl">
-  <uib-carousel interval="mainCarouselCtrl.setInterval" no-wrap="mainCarouselCtrl.noWrapSlides">
-    <uib-slide ng-repeat="slide in mainCarouselCtrl.slides" active="slide.active">
+<div id="slides_control" ng-controller="CarouselController as carouselCtrl">
+  <uib-carousel interval="carouselCtrl.setInterval" no-wrap="carouselCtrl.noWrapSlides">
+    <uib-slide ng-repeat="slide in carouselCtrl.slides" active="slide.active">
       <img ng-src="{{slide.image}}">
       <div class="carousel-caption">
         <h2>{{slide.caption}}</h2>

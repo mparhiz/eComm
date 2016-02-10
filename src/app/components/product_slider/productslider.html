@@ -1,4 +1,4 @@
-<div id="productSlider" ng-controller="productSliderController as productSliderCtrl">
+<div id="productSlider" ng-controller="ProductSliderController as ProductSliderCtrl">
 
   <div id="Carousel" class="carousel slide">
 
@@ -11,9 +11,9 @@
 
       <div class="item active">
         <div class="row">
-          <div class="col-md-3" ng-repeat="product in productSliderCtrl.products | orderBy: name | limitTo: 4">
+          <div class="col-md-3" ng-repeat="product in ProductSliderCtrl.products | orderBy: name | limitTo: 4">
 
-            <ec-product-block item="product"></ec-product-block>
+            <ec-product-block-directive item="product"></ec-product-block-directive>
 
           </div>
         </div>
