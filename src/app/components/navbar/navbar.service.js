@@ -6,12 +6,12 @@
     .constant('NAVBAR_URL','api/main/navbar')
     .service('NavbarService',NavbarService);
 
-  function NavbarService($http) {
+  function NavbarService($http, NAVBAR_URL) {
     return {
-      retrieveNavbar: function(_url_){
-        return $http.get(_url_)
-        .then(function succssCallback(response){
-          return response.data
+      retrieveNavbarItems: function(){
+        return $http.get(NAVBAR_URL)
+        .then(function (response){
+          return response.data;
         });
       }
     }

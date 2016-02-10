@@ -5,14 +5,15 @@
     .module('navbar')
     .controller('NavbarController', NavbarController);
 
-  function NavbarController(NavbarService, NAVBAR_URL) {
+  function NavbarController(NavbarService) {
     var vm = this;
     vm.navCollapsed = true;
     vm.toggleNavbar = toggleNavbar;
 
-    NavbarService.retrieveNavbar(NAVBAR_URL).then( function(items) {
-      vm.items = items;
-    });
+    NavbarService.retrieveNavbarItems()
+      .then( function(items) {
+        vm.items = items;
+      });
 
     function toggleNavbar(){
       vm.navCollapsed = !vm.navCollapsed;

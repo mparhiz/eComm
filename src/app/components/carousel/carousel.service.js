@@ -6,12 +6,12 @@
     .service('CarouselService',CarouselService)
     .constant('CAROUSEL_URL', 'api/main/carousel');
 
-  function CarouselService($http) {
+  function CarouselService($http, CAROUSEL_URL) {
     return {
-      retrieveCarousel: function(_url_){
-        return $http.get(_url_)
-        .then(function succssCallback(response){
-          return response.data
+      retrieveCarouselSlides: function(){
+        return $http.get(CAROUSEL_URL)
+        .then(function (response){
+          return response.data;
         });
       }
     }
