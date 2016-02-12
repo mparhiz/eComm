@@ -3,13 +3,12 @@
 
   angular
     .module('navbar')
-    .constant('NAVBAR_URL','api/main/navbar')
     .service('NavbarService',NavbarService);
 
-  function NavbarService($http, NAVBAR_URL) {
+  function NavbarService($http, URL_MAPPINGS) {
     return {
       retrieveNavbarItems: function(){
-        return $http.get(NAVBAR_URL)
+        return $http.get(URL_MAPPINGS.NAVBAR_URL)
         .then(function (response){
           return response.data;
         });

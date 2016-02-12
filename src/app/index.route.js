@@ -8,38 +8,43 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
-        url: '/',
+      .state('main', {
         templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        abstract: true
       })
-      .state('products', {
+      .state('main.home', {
+        url: '/',
+        templateUrl: 'app/home/home.html'
+      })
+      .state('main.products', {
         url: '/products',
         templateUrl: 'app/products/products.html',
         params: {
           type: null
         }
       })
-      .state('sale', {
+      .state('main.detail', {
+        url: '/products/detail/:productId',
+        templateUrl: 'app/components/product_detail/product-detail.html',
+        params: {
+          product: {},
+          productId: null
+        }
+      })
+      .state('main.sale', {
         url: '/sale',
         templateUrl: 'app/sale/sale.html',
         params: {
           type: null
         }
       })
-      .state('contact', {
+      .state('main.contact', {
         url: '/contact',
         templateUrl: 'app/contact/contact.html'
       })
-      .state('about', {
+      .state('main.about', {
         url: '/about',
         templateUrl: 'app/about/about.html'
-      })
-      .state('home.speciadproducts', {
-        url: '/speciadproducts',
-        templateUrl: 'app/components/special_products/special-products.html',
-        parent: 'home'
       });
 
     $urlRouterProvider.otherwise('/');
