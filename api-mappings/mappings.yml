@@ -82,6 +82,18 @@
     status: 200
     file: "main-clearances.json"
 
+##########################################################################################################
+#
+# Retrieving the list of tabs information for Special-Products to show in the middle of the main page.
+#
+##########################################################################################################
+- request:
+    url: /api/main/special/tabs
+    method: GET
+  response:
+    status: 200
+    file: "main-special-tabs.json"
+
 #- request:
 #    url: /api/users
 #    method: POST

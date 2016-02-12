@@ -3,13 +3,12 @@
 
   angular
     .module('carousel')
-    .service('CarouselService',CarouselService)
-    .constant('CAROUSEL_URL', 'api/main/carousel');
+    .service('CarouselService',CarouselService);
 
-  function CarouselService($http, CAROUSEL_URL) {
+  function CarouselService($http, URL_MAPPINGS) {
     return {
       retrieveCarouselSlides: function(){
-        return $http.get(CAROUSEL_URL)
+        return $http.get(URL_MAPPINGS.CAROUSEL_URL)
         .then(function (response){
           return response.data;
         });

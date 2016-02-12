@@ -2,9 +2,8 @@
   'use strict';
 
   angular
-    .module('main')
+    .module('productslider')
     .directive('ecProductBlock', ecProductBlock);
-
 
   function ecProductBlock(){
     return {
@@ -16,6 +15,5 @@
       }
     };
   }
-
 
 })();
