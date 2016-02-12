@@ -23,6 +23,14 @@
           type: null
         }
       })
+      .state('main.detail', {
+        url: '/products/detail/:productId',
+        templateUrl: 'app/components/product_detail/product-detail.html',
+        params: {
+          product: {},
+          productId: null
+        }
+      })
       .state('main.sale', {
         url: '/sale',
         templateUrl: 'app/sale/sale.html',

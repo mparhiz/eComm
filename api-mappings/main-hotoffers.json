@@ -1,12 +1,35 @@
 [
   {
     "id" : "1001",
-    "name" : "Hat",
+    "name" : "Boys & Girls Sun Hat",
     "category" : "Cloth",
     "subCategory": "Baby",
     "availableDate" : "2015-07-06T00:00:00.000Z",
     "price" : 19.95,
-    "imageUrl" : "app/main/Products_imgs/1001.jpg"
+    "imageUrl" : "app/main/Products_imgs/1001.jpg",
+    "rate" : 3.5,
+    "oldPrice" : 35.00,
+    "postage" : 4.50,
+    "spec" : "Condition: 100% Brand New and high quality!!!  Type: Kid's hat Jazz    Material: Cotton Blend    Colour: 10 style Colour    Size: head circumference: 51cm    Note: 1: 1 Inch=2.54 CM; 1 CM=0.39 Inch.    2: Due to different producing batches, there may be deviation of 2----3 CM for items.    3: Colors on your computer monitor may differ slightly from actual product colors depending on your monitor settings.",
+    "deliveryTime" : "Estimated between Wed. 30 Mar. and Wed. 13 Apr.",
+    "delivery" : "We attempt to dispatch orders placed before 2pm on the same working day. All other orders are dispatched on the next working day. We will notify you via email once your order has been dispatched     UK delivery: 2 Working days from dispatch - FREE    North American delivery: Within 3 working days from dispatch - FREE    European delivery: Within 3 working days from dispatch - FREE    International delivery: Within 7 working days from dispatch",
+    "desc" : "Suitable for both Girls and Boys"
+  },
+  {
+    "id" : "1005",
+    "name" : "Frog Hat Costume",
+    "category" : "Cloth",
+    "subCategory": "Baby",
+    "availableDate" : "2015-07-15T00:00:00.000Z",
+    "price" : 5.95,
+    "imageUrl" : "app/main/Products_imgs/1005.jpg",
+    "rate" : 4,
+    "oldPrice" : 10.00,
+    "postage" : 2.00,
+    "spec" : "100% Brand new and high quality - It is warm and cute for your baby - It is good  costume photograph prop - Color : green - Material:cotton thread - Head size: app 34cm - Cap length: app 19cm - Width: app 16cm",
+    "deliveryTime" : "Estimated between Wed. 2 Mar. and Tue. 15 Mar.",
+    "delivery" : "We attempt to dispatch orders placed before 2pm on the same working day. All other orders are dispatched on the next working day. We will notify you via email once your order has been dispatched     UK delivery: 2 Working days from dispatch - FREE    North American delivery: Within 3 working days from dispatch - FREE    European delivery: Within 3 working days from dispatch - FREE    International delivery: Within 7 working days from dispatch",
+    "desc" : "Baby Infant Newborn Handmade Crochet Knit Cap Frog Hat Costume Photograph Prop"
   },
   {
     "id" : "1002",
@@ -15,7 +38,14 @@
     "subCategory": "Baby",
     "availableDate" : "2015-07-07T00:00:00.000Z",
     "price" : 100.00,
-    "imageUrl" : "app/main/Products_imgs/1002.jpg"
+    "imageUrl" : "app/main/Products_imgs/1002.jpg",
+    "rate" : 4.5,
+    "oldPrice" : 135.00,
+    "postage" : 4.50,
+    "spec" : "Condition: 100% Brand New and high quality!!!  Type: Kid's hat Jazz    Material: Cotton Blend    Colour: 10 style Colour    Size: head circumference: 51cm    Note: 1: 1 Inch=2.54 CM; 1 CM=0.39 Inch.    2: Due to different producing batches, there may be deviation of 2----3 CM for items.    3: Colors on your computer monitor may differ slightly from actual product colors depending on your monitor settings.",
+    "deliveryTime" : "Estimated between Wed. 30 Mar. and Wed. 13 Apr.",
+    "delivery" : "We attempt to dispatch orders placed before 2pm on the same working day. All other orders are dispatched on the next working day. We will notify you via email once your order has been dispatched     UK delivery: 2 Working days from dispatch - FREE    North American delivery: Within 3 working days from dispatch - FREE    European delivery: Within 3 working days from dispatch - FREE    International delivery: Within 7 working days from dispatch",
+    "desc" : "Suitable for both Girls and Boys"
   },
   {
     "id" : "1003",
@@ -24,7 +54,14 @@
     "subCategory": "Baby",
     "availableDate" : "2015-09-08T00:00:00.000Z",
     "price" : 20.50,
-    "imageUrl" : "app/main/Products_imgs/1003.jpg"
+    "imageUrl" : "app/main/Products_imgs/1003.jpg",
+    "rate" : 4,
+    "oldPrice" : 35.00,
+    "postage" : 1.50,
+    "spec" : "Condition: 100% Brand New and high quality!!!  Type: Kid's hat Jazz    Material: Cotton Blend    Colour: 10 style Colour    Size: head circumference: 51cm    Note: 1: 1 Inch=2.54 CM; 1 CM=0.39 Inch.    2: Due to different producing batches, there may be deviation of 2----3 CM for items.    3: Colors on your computer monitor may differ slightly from actual product colors depending on your monitor settings.",
+    "deliveryTime" : "Estimated between Wed. 30 Mar. and Wed. 13 Apr.",
+    "delivery" : "We attempt to dispatch orders placed before 2pm on the same working day. All other orders are dispatched on the next working day. We will notify you via email once your order has been dispatched     UK delivery: 2 Working days from dispatch - FREE    North American delivery: Within 3 working days from dispatch - FREE    European delivery: Within 3 working days from dispatch - FREE    International delivery: Within 7 working days from dispatch",
+    "desc" : "Suitable for both Girls and Boys"
   },
   {
     "id" : "1004",
@@ -33,7 +70,14 @@
     "subCategory": "Baby",
     "availableDate" : "2015-10-30T00:00:00.000Z",
     "price" : 31.00,
-    "imageUrl" : "app/main/Products_imgs/1004.jpg"
+    "imageUrl" : "app/main/Products_imgs/1004.jpg",
+    "rate" : 3.5,
+    "oldPrice" : 35.00,
+    "postage" : 3.00,
+    "spec" : "Condition: 100% Brand New and high quality!!!  Type: Kid's hat Jazz    Material: Cotton Blend    Colour: 10 style Colour    Size: head circumference: 51cm    Note: 1: 1 Inch=2.54 CM; 1 CM=0.39 Inch.    2: Due to different producing batches, there may be deviation of 2----3 CM for items.    3: Colors on your computer monitor may differ slightly from actual product colors depending on your monitor settings.",
+    "deliveryTime" : "Estimated between Wed. 30 Mar. and Wed. 13 Apr.",
+    "delivery" : "We attempt to dispatch orders placed before 2pm on the same working day. All other orders are dispatched on the next working day. We will notify you via email once your order has been dispatched     UK delivery: 2 Working days from dispatch - FREE    North American delivery: Within 3 working days from dispatch - FREE    European delivery: Within 3 working days from dispatch - FREE    International delivery: Within 7 working days from dispatch",
+    "desc" : "Suitable for both Girls and Boys"
   },
   {
     "id" : "1101",
@@ -42,7 +86,14 @@
     "subCategory": "Doll",
     "availableDate" : "2015-01-01T00:00:00.000Z",
     "price" : 29.99,
-    "imageUrl" : "app/main/Products_imgs/1101.jpg"
+    "imageUrl" : "app/main/Products_imgs/1101.jpg",
+    "rate" : 4.5,
+    "oldPrice" : 31.00,
+    "postage" : 2.00,
+    "spec" : "Condition: 100% Brand New and high quality!!!  Type: Kid's hat Jazz    Material: Cotton Blend    Colour: 10 style Colour    Size: head circumference: 51cm    Note: 1: 1 Inch=2.54 CM; 1 CM=0.39 Inch.    2: Due to different producing batches, there may be deviation of 2----3 CM for items.    3: Colors on your computer monitor may differ slightly from actual product colors depending on your monitor settings.",
+    "deliveryTime" : "Estimated between Wed. 30 Mar. and Wed. 13 Apr.",
+    "delivery" : "We attempt to dispatch orders placed before 2pm on the same working day. All other orders are dispatched on the next working day. We will notify you via email once your order has been dispatched     UK delivery: 2 Working days from dispatch - FREE    North American delivery: Within 3 working days from dispatch - FREE    European delivery: Within 3 working days from dispatch - FREE    International delivery: Within 7 working days from dispatch",
+    "desc" : "Suitable for both Girls and Boys"
   },
   {
     "id" : "1102",
@@ -51,7 +102,14 @@
     "subCategory": "Puzzle",
     "availableDate" : "2015-02-30T00:00:00.000Z",
     "price" : 39.99,
-    "imageUrl" : "app/main/Products_imgs/1102.jpg"
+    "imageUrl" : "app/main/Products_imgs/1102.jpg",
+    "rate" : 5,
+    "oldPrice" : 55.00,
+    "postage" : 3.00,
+    "spec" : "Condition: 100% Brand New and high quality!!!  Type: Kid's hat Jazz    Material: Cotton Blend    Colour: 10 style Colour    Size: head circumference: 51cm    Note: 1: 1 Inch=2.54 CM; 1 CM=0.39 Inch.    2: Due to different producing batches, there may be deviation of 2----3 CM for items.    3: Colors on your computer monitor may differ slightly from actual product colors depending on your monitor settings.",
+    "deliveryTime" : "Estimated between Wed. 30 Mar. and Wed. 13 Apr.",
+    "delivery" : "We attempt to dispatch orders placed before 2pm on the same working day. All other orders are dispatched on the next working day. We will notify you via email once your order has been dispatched     UK delivery: 2 Working days from dispatch - FREE    North American delivery: Within 3 working days from dispatch - FREE    European delivery: Within 3 working days from dispatch - FREE    International delivery: Within 7 working days from dispatch",
+    "desc" : "Suitable for both Girls and Boys"
   },
   {
     "id" : "1201",
@@ -60,7 +118,14 @@
     "subCategory": "Computer",
     "availableDate" : "2015-05-30T00:00:00.000Z",
     "price" : 300.00,
-    "imageUrl" : "app/main/Products_imgs/1201.jpg"
+    "imageUrl" : "app/main/Products_imgs/1201.jpg",
+    "rate" : 4.5,
+    "oldPrice" : 350.00,
+    "postage" : 14.50,
+    "spec" : "Condition: 100% Brand New and high quality!!!  Type: Kid's hat Jazz    Material: Cotton Blend    Colour: 10 style Colour    Size: head circumference: 51cm    Note: 1: 1 Inch=2.54 CM; 1 CM=0.39 Inch.    2: Due to different producing batches, there may be deviation of 2----3 CM for items.    3: Colors on your computer monitor may differ slightly from actual product colors depending on your monitor settings.",
+    "deliveryTime" : "Estimated between Wed. 30 Mar. and Wed. 13 Apr.",
+    "delivery" : "We attempt to dispatch orders placed before 2pm on the same working day. All other orders are dispatched on the next working day. We will notify you via email once your order has been dispatched     UK delivery: 2 Working days from dispatch - FREE    North American delivery: Within 3 working days from dispatch - FREE    European delivery: Within 3 working days from dispatch - FREE    International delivery: Within 7 working days from dispatch",
+    "desc" : "Suitable for both Girls and Boys"
   },
   {
     "id" : "1301",
@@ -69,7 +134,13 @@
     "subCategory": "TV",
     "availableDate" : "2015-12-07T00:00:00.000Z",
     "price" : 99.99,
-    "imageUrl" : "app/main/Products_imgs/1301.jpg"
+    "imageUrl" : "app/main/Products_imgs/1301.jpg",
+    "rate" : 3.5,
+    "oldPrice" : 135.00,
+    "postage" : 20.00,
+    "spec" : "Condition: 100% Brand New and high quality!!!  Type: Kid's hat Jazz    Material: Cotton Blend    Colour: 10 style Colour    Size: head circumference: 51cm    Note: 1: 1 Inch=2.54 CM; 1 CM=0.39 Inch.    2: Due to different producing batches, there may be deviation of 2----3 CM for items.    3: Colors on your computer monitor may differ slightly from actual product colors depending on your monitor settings.",
+    "deliveryTime" : "Estimated between Wed. 30 Mar. and Wed. 13 Apr.",
+    "delivery" : "We attempt to dispatch orders placed before 2pm on the same working day. All other orders are dispatched on the next working day. We will notify you via email once your order has been dispatched     UK delivery: 2 Working days from dispatch - FREE    North American delivery: Within 3 working days from dispatch - FREE    European delivery: Within 3 working days from dispatch - FREE    International delivery: Within 7 working days from dispatch",
+    "desc" : "Suitable for both Girls and Boys"
   }
 ]
-

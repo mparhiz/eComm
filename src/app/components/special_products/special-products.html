@@ -1,7 +1,7 @@
 <div class="container">
-  <div id="specialProducts" ng-controller="specialProductsController as specialProductsCtrl">
+  <div id="special-products" ng-controller="specialProductsController as specialProductsCtrl">
     <uib-tabset justified="true">
-      <uib-tab class="active" ng-repeat="tab in specialProductsCtrl.tabs" >
+      <uib-tab ng-repeat="tab in specialProductsCtrl.tabs" >
 
         <uib-tab-heading>
           <i class="{{tab.icon}}"></i>{{"  "+tab.title}}
