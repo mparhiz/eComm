@@ -10,7 +10,6 @@
     return {
       restrict: 'E',
       templateUrl: 'app/components/product_slider/product-slider.html',
-      replace: true,
       scope: {
         tabUrl: "="
       },

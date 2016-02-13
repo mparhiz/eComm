@@ -9,7 +9,6 @@
     return {
       restrict: 'E',
       templateUrl: 'app/components/product_block/product-block.html',
-      replase: true,
       scope: {
         item: "="
       }
