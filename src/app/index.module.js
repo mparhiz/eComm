@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('eComm', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'main']);
+    .module('eComm', ['ui.router', 'ngAnimate', 'toastr', 'ui.bootstrap', 'main']);
 
 })();

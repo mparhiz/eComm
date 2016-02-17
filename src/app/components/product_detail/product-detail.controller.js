@@ -5,7 +5,7 @@
 		.module('productdetail')
 		.controller('productDetailController', productDetailController);
 
-	function productDetailController($stateParams, GetProductDetailImageService, mainService){
+	function productDetailController($stateParams, GetProductDetailImageService, mainService, toastr){
 		var vm = this;
 		vm.rate = 0;
 		vm.isReadonly = true;
@@ -49,6 +49,15 @@
 		vm.addReview = function(reviews){
 			reviews.push(vm.review);
 			vm.review = {};
+			vm.showMsgs(vm.errorKeys.SERVER_ERROR);
+		}
+
+		vm.errorKeys = {
+			"EMAIL_INVALID": "Please Enter a valid Email address!",
+			"SERVER_ERROR" : "Cannot connect to server!"
+		};
+		vm.showMsgs = function(msg_){
+			toastr.error(msg_,'Error');
 		}
 	}
 
