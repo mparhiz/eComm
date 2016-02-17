@@ -18,6 +18,8 @@
 		vm.specials = $stateParams.specials;
 		vm.productId = $stateParams.productId;
 		vm.groupSize = 4;
+		vm.review = {};
+		vm.reviews = [];
 
 		if (vm.specials != null) {
 			mainService.retriveSpecialProductsData(vm.specials)
@@ -42,6 +44,11 @@
 							});
 					}
 				});
+		}
+
+		vm.addReview = function(reviews){
+			reviews.push(vm.review);
+			vm.review = {};
 		}
 	}
 

@@ -1,7 +1,7 @@
 <div id="productDetail" class="container" ng-controller="productDetailController as productDetailCtrl">
 	<div class="row product-info">
 		<div class="col-md-6 pictures">
-			<img src="{{productDetailCtrl.product.imageUrl}}" alt="{{productDetailCtrl.product.name}}">
+			<img class="img-rounded" src="{{productDetailCtrl.product.imageUrl}}" alt="{{productDetailCtrl.product.name}}">
 
 			<div class="row">
 				
@@ -10,7 +10,7 @@
 						<uib-carousel interval="productDetailCtrl.setInterval" no-wrap="productDetailCtrl.noWrapSlides">
 							<uib-slide ng-repeat="imageGroup in productDetailCtrl.arrayOfImageGroup" active="slide.active">
 								<div>
-									<a ng-repeat="image in imageGroup" href=""><img ng-src="{{image}}"></a>
+									<a ng-repeat="image in imageGroup" href=""><img class="img-thumbnail" ng-src="{{image}}"></a>
 								</div>
 							</uib-slide>
 						</uib-carousel>
@@ -63,6 +63,41 @@
 							<p>DELIVERY</p>
 						</uib-tab-heading>
 						<p class="p">{{productDetailCtrl.product.delivery}}</p>
+					</uib-tab>
+					<uib-tab>
+						<uib-tab-heading>
+							<p>REVIEW</p>
+						</uib-tab-heading>
+						<div class="row">
+							<div class="col-md-6">
+								<h2>Reviews</h2>
+								<blockquote ng-repeat="review in productDetailCtrl.reviews">
+									<uib-rating ng-model="review.rate" max="5" readonly="true" on-hover="" on-leave="" aria-labelledby="default-rating"></uib-rating>
+									<p>{{review.body}}</p>
+									<footer ng-show="(review.author.fullName != null) || (review.author.email != null)">
+										By:
+										<cite><strong>{{review.author.fullName}} </strong></cite>
+										<cite> {{review.author.email}}</cite>
+									</footer>
+								</blockquote>
+							</div>
+							<div class="col-md-5 col-md-offset-1">
+								<form name="reviewForm" ng-submit="reviewForm.$valid && productDetailCtrl.addReview(productDetailCtrl.reviews)" novalidate>
+									<div class="form-group">
+										<uib-rating name="rate" ng-model="productDetailCtrl.review.rate" max="5" readonly="false" aria-labelledby="default-rating" required></uib-rating>
+									</div>
+									<div class="form-group">
+										<textarea name="desc" class="form-control" ng-model="productDetailCtrl.review.body" rows="5" required></textarea>
+									</div>
+									<div class="form-group">
+										<label>By:</label>
+										<input type="text" class="form-control" placeholder="Full Name..." ng-model="productDetailCtrl.review.author.fullName"></input>
+										<input name="email" type="email" class="form-control" placeholder="email..." ng-model="productDetailCtrl.review.author.email" uib-popover="{{reviewForm.email.$error.email?'Invalid Email!':''}}" popover-trigger="mouseenter" popover-placement="right" ></input>
+									</div>
+									<button type="submit" class="btn btn-primary" uib-popover="{{reviewForm.rate.$valid ? (reviewForm.desc.$valid ? '':'Enter your idea!'):'Rating is required!'}}" popover-trigger="mouseenter" popover-placement="right" >Submit</button>
+								</form>
+							</div>
+						</div>
 					</uib-tab>
 				</uib-tabset>
 			</div>
