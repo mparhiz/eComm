@@ -24,10 +24,10 @@
         }
       })
       .state('main.detail', {
-        url: '/products/detail/:productId',
+        url: '/products/detail/:specials/:productId',
         templateUrl: 'app/components/product_detail/product-detail.html',
         params: {
-          product: {},
+          specials: null,
           productId: null
         }
       })

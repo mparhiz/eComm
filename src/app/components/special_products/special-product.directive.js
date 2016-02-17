@@ -11,7 +11,7 @@
       restrict: 'E',
       templateUrl: 'app/components/product_slider/product-slider.html',
       scope: {
-        tabUrl: "="
+        tabName: "="
       },
       controller: 'productSliderController',
       controllerAs: 'productSliderCtrl'

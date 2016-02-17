@@ -2,21 +2,22 @@
   {
     "title" : "Hot Offers",
     "icon" : "glyphicon glyphicon-fire",
-    "url_" : "api/main/hotoffers"
+    "tabName" : "hotoffers"
+
   },
   {
     "title" : "New Products",
     "icon" : "glyphicon glyphicon-check",
-    "url_" : "api/main/newproducts"
+    "tabName" : "newproducts"
   },
   {
     "title" : "Top Picks",
     "icon" : "glyphicon glyphicon-arrow-up",
-    "url_" : "api/main/toppicks"
+    "tabName" : "toppicks"
   },
   {
     "title" : "Clearance",
     "icon" : "glyphicon glyphicon-bullhorn",
-    "url_" : "api/main/clearances"
+    "tabName" : "clearances"
   }
 ]

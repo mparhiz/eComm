@@ -94,6 +94,18 @@
     status: 200
     file: "main-special-tabs.json"
 
+#####################################################################################
+#
+# Retrieving the list of images for each product to show in the Product Detail page.
+#
+#####################################################################################
+- request:
+    url: /api/product/:id/images
+    method: GET
+  response:
+    status: 200
+    file: "product-<%= params.id %>-images.json"
+
 #- request:
 #    url: /api/users
 #    method: POST

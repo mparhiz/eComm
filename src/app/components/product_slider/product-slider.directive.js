@@ -10,7 +10,8 @@
       restrict: 'E',
       templateUrl: 'app/components/product_block/product-block.html',
       scope: {
-        item: "="
+        item: "=",
+        specials: "="
       }
     };
   }

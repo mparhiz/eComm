@@ -1,0 +1,48 @@
+(function(){
+	'use strict';
+
+	angular
+		.module('productdetail')
+		.controller('productDetailController', productDetailController);
+
+	function productDetailController($stateParams, GetProductDetailImageService, mainService){
+		var vm = this;
+		vm.rate = 0;
+		vm.isReadonly = true;
+		vm.listOfDefaultQtys = [1,2,3,4,5,6,7,8,9,10];
+		vm.setInterval = -1;
+		vm.noWrapSlides = false;
+		vm.products = [];
+		vm.product = {};
+		vm.arrayOfImageGroup = [];
+		vm.specials = $stateParams.specials;
+		vm.productId = $stateParams.productId;
+		vm.groupSize = 4;
+
+		if (vm.specials != null) {
+			mainService.retriveSpecialProductsData(vm.specials)
+				.then(function(products){
+					vm.products = products;
+
+					if (angular.isDefined(vm.productId)) {
+						angular.forEach(vm.products, function(value){
+							if (value.id == vm.productId) {
+								vm.product = value;
+								vm.rate = vm.product.rate;
+							}
+						});
+
+						GetProductDetailImageService.retrieveImages(vm.productId)
+							.then( function(images) {
+								vm.images = images;
+
+								if (angular.isDefined(vm.images.imagesUrl)) {
+									vm.arrayOfImageGroup = mainService.setupObjectArray(vm.images.imagesUrl, vm.groupSize);
+								}
+							});
+					}
+				});
+		}
+	}
+
+})();

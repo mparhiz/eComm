@@ -11,7 +11,6 @@
     SpecialProductsService.retrieveTabsInfo(URL_MAPPINGS.TABSINFO_URL).then( function(tabs) {
       vm.tabs = tabs;
     });
-
   }
 
 })();

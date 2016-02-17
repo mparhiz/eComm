@@ -1,62 +1,72 @@
-<div id="productDetail" class="container">
+<div id="productDetail" class="container" ng-controller="productDetailController as productDetailCtrl">
 	<div class="row product-info">
-		
-		<div class="col-md-6 picturs">
-			<img src="{{$stateParams.product.imageUrl}}" alt="{{$stateParams.product.name}}">
-		</div>
-		
-		<div class="col-md-6">
-			<div id="detail">
-				<h1>{{$stateParams.product.name}}</h1>
-				<div class="price">
-					<h4>{{$stateParams.product.oldPrice | currency}}</h4>
-					<h1>{{$stateParams.product.price | currency}}</h1>
-				</div>
-			    <uib-rating ng-model="rate" ng-init="rate = $stateParams.product.rate" max="5" readonly="isReadonly" on-hover="" on-leave="" aria-labelledby="default-rating"></uib-rating>
-				<br />
-				<form class="form-inline">
-					<label>Qty
-						<select class="form-control" ng-model="no_" ng-options="i for i in [1,2,3,4,5,6,7,8,9,10]">
-							<option></option>
-						</select>
-					</label>
-				</form><br />
-				<button class="btn btn-primary">Add to Card</button>
-				<div class="align-left">
-					<h4>Category: <span>{{"     "+$stateParams.product.category}}</span></h4>
-					<h4>Postage: <span>AUD {{$stateParams.product.postage | currency}} Economy delivery from outside AU</span></h4>
-					<h4>Delivery Time: <span>{{"   "+$stateParams.product.deliveryTime}}</span></h4>
-					<h4>Total Price: <span>{{$stateParams.product.price + $stateParams.product.postage | currency}}</span></h4>
+		<div class="col-md-6 pictures">
+			<img src="{{productDetailCtrl.product.imageUrl}}" alt="{{productDetailCtrl.product.name}}">
+
+			<div class="row">
+				
+				<div class="col-md-10 col-md-offset-1">
+					<div class="productDetailSlider">
+						<uib-carousel interval="productDetailCtrl.setInterval" no-wrap="productDetailCtrl.noWrapSlides">
+							<uib-slide ng-repeat="imageGroup in productDetailCtrl.arrayOfImageGroup" active="slide.active">
+								<div>
+									<a ng-repeat="image in imageGroup" href=""><img ng-src="{{image}}"></a>
+								</div>
+							</uib-slide>
+						</uib-carousel>
+					</div>
 				</div>
 			</div>
+
 		</div>
 		
-		<div id="tab" class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">
-				<div class="info">
-					<uib-tabset justified="true">
-						<uib-tab>
-							<uib-tab-heading>
-								<p>DESCRIPTION</p>
-							</uib-tab-heading>
-							<p class="p">{{$stateParams.product.desc}}</p>
-						</uib-tab>
-						<uib-tab>
-							<uib-tab-heading>
-								<p>SPECIFICS</p>
-							</uib-tab-heading>
-							<p class="p">{{$stateParams.product.spec}}</p>
-						</uib-tab>
-						<uib-tab>
-							<uib-tab-heading>
-								<p>DELIVERY</p>
-							</uib-tab-heading>
-							<p class="p">{{$stateParams.product.delivery}}</p>
-						</uib-tab>
-					</uib-tabset>
-				</div>
+		<div class="col-md-5 col-md-offset-1 detail">
+			<h1>{{productDetailCtrl.product.name}}</h1>
+			<h1><small><del>{{productDetailCtrl.product.oldPrice | currency}}</del></small> {{productDetailCtrl.product.price | currency}}</h1>
+		    <uib-rating ng-model="productDetailCtrl.rate" max="5" readonly="productDetailCtrl.isReadonly" on-hover="" on-leave="" aria-labelledby="default-rating"></uib-rating>
+			<br />
+			<form class="form-inline">
+				<label>Qty
+					<select class="form-control" ng-model="no_" ng-options="i for i in productDetailCtrl.listOfDefaultQtys">
+						<option></option>
+					</select>
+				</label>
+			</form><br />
+			<button class="btn btn-primary">Add to Cart</button>
+			<div class="align-left">
+				<h4>Category: <small>{{productDetailCtrl.product.category}}</small></h4>
+				<h4>Postage: <small>AUD {{productDetailCtrl.product.postage | currency}} Economy delivery from outside AU</small></h4>
+				<h4>Delivery Time: <small>{{productDetailCtrl.product.deliveryTime}}</small></h4>
+				<h4>Total Price: <small>{{productDetailCtrl.product.price + productDetailCtrl.product.postage | currency}}</small></h4>
+			</div>
+		</div>
+	</div>	
+	
+	<div class="row tab">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="info">
+				<uib-tabset justified="true">
+					<uib-tab>
+						<uib-tab-heading>
+							<p>DESCRIPTION</p>
+						</uib-tab-heading>
+						<p class="p">{{productDetailCtrl.product.desc}}</p>
+					</uib-tab>
+					<uib-tab>
+						<uib-tab-heading>
+							<p>SPECIFICS</p>
+						</uib-tab-heading>
+						<p class="p">{{productDetailCtrl.product.spec}}</p>
+					</uib-tab>
+					<uib-tab>
+						<uib-tab-heading>
+							<p>DELIVERY</p>
+						</uib-tab-heading>
+						<p class="p">{{productDetailCtrl.product.delivery}}</p>
+					</uib-tab>
+				</uib-tabset>
 			</div>
 		</div>
 	</div>
+	
 </div>
