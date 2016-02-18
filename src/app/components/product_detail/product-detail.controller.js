@@ -14,6 +14,7 @@
 		vm.noWrapSlides = false;
 		vm.products = [];
 		vm.product = {};
+		vm.mainImage = '';
 		vm.arrayOfImageGroup = [];
 		vm.specials = $stateParams.specials;
 		vm.productId = $stateParams.productId;
@@ -31,8 +32,9 @@
 							if (value.id == vm.productId) {
 								vm.product = value;
 								vm.rate = vm.product.rate;
+								vm.mainImage = vm.product.imageUrl;
 							}
-						});
+						}); 
 
 						GetProductDetailImageService.retrieveImages(vm.productId)
 							.then( function(images) {
@@ -44,6 +46,10 @@
 							});
 					}
 				});
+		}
+
+		vm.changeImage = function(image_){
+			vm.mainImage = image_;
 		}
 
 		vm.addReview = function(reviews){

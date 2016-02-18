@@ -1,142 +1,144 @@
-.rotate(@degrees) {
-  -webkit-transform: rotate(@degrees);
-      -ms-transform: rotate(@degrees); // IE9 only
-          transform: rotate(@degrees);
-}
-
 #productDetail{
-	padding-top: 15%;
-	background-color: rgba(235, 235, 235, 0.7);
+	.backgroundImage{
+		padding: 0;
+		margin: 0;
+		position: fixed;
+		top: 0;
+		background-color: #FFF;
 
-	.product-info{
-		.pictures{
-			>img{
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-				margin-top: 20px;
-				height: auto;
-				width: 300px;
-				z-index: 1;
-			}
-
-			.productDetailSlider{
-				.carousel{
-					.carousel-inner{
-						margin: 5px 5px 3px 5px;
-						padding-bottom: 20px;
-						//align-items: center;
-						//justify-content: center;
-						
-						img{
-							margin: 5px;
-							height: 80px;
-							width: 80px;
-						}
-					}
-
-					a.carousel-control{
-						height: 15px;
-						width: 15px;
-						background: none repeat scroll 0 0;
-						//border: 15px solid #000 !important;
-						//border-radius: 20px;
-						margin-top: 50px;
-						//overflow: hidden; 
-					}
-
-					a.carousel-control.right {
-						color: #000 !important;
-						//right: -10px;
-					}
-
-					a.carousel-control.left {
-						color: #000 !important;
-						//left: -5px;
-					}
-
-					.carousel-indicators{
-						right: 50%;
-						top: auto;
-						bottom: -5px;
-						//margin-right: -19px;
-
-						li{
-							background: #cecece;
-						}
-
-						.active{
-							background: #428bca;
-						}
-					}
-				}
-			}	
-		}
-
-		.detail{
-			width: auto;
-			margin: 5px;
-			background-color: #FFF6BC;
-			padding: 5px;
-			text-align: center;
-			box-shadow: 5px 5px 5px #CFCFCF;
-			
-			h1{
-				color: red;
-			}
-
-			.fieldset{
-				text-align: left !important;
-			}
-
-			.align-left{
-				margin-left: 5%;
-				text-align: left;
-				h4>span{
-					font-size: 10pt;
-				}
-			}
+		img{
+			width: 100%;
+			height: 400px;
+			object-fit: cover;
+			opacity: .5;
 		}
 	}
 
-	.tab{
-		.info{
-			margin-top: 50px;
-			margin-bottom: 50px;
+	.body{
+		padding-top: 15%;
+		background-color: rgb(235, 235, 235);
 
-			.tab-content{
-				border-bottom: 4px solid #FB6C20;
+		.product-info{
+			.pictures{
+				>img{
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+					margin-top: 20px;
+					height: auto;
+					width: 300px;
+					z-index: 1;
+				}
+
+				.productDetailSlider{
+					.carousel{
+						.carousel-inner{
+							margin: 5px 5px 3px 5px;
+							padding-bottom: 20px;
+							//align-items: center;
+							//justify-content: center;
+							
+							img{
+								margin: 5px;
+								height: 80px;
+								width: 80px;
+							}
+						}
+
+						a.carousel-control{
+							height: 15px;
+							width: 15px;
+							background: none repeat scroll 0 0;
+							//border: 15px solid #000 !important;
+							//border-radius: 20px;
+							margin-top: 50px;
+							//overflow: hidden;
+							color: #000 !important;
+						}
+
+						.carousel-indicators{
+							right: 50%;
+							top: auto;
+							bottom: -5px;
+							//margin-right: -19px;
+
+							li{
+								background: #cecece;
+							}
+
+							.active{
+								background: #428bca;
+							}
+						}
+					}
+				}	
 			}
 
-			.p{
-				padding: 10px;
-			}
+			.detail{
+				width: auto;
+				margin: 5px;
+				background-color: #FFF6BC;
+				padding: 5px;
+				text-align: center;
+				box-shadow: 5px 5px 5px #7F7F7F;
+				opacity: .8;
+				h1{
+					color: red;
+				}
 
-			.nav .uib-tab uib-tab-heading{
-				font-size: 110%;
-				color: #FB6C20;
-				i {
-					font-size: 170%;
+				.fieldset{
+					text-align: left !important;
+				}
+
+				.align-left{
+					margin-left: 5%;
+					text-align: left;
+					h4>span{
+						font-size: 10pt;
+					}
 				}
 			}
+		}
 
-			.nav .uib-tab.active{
-				border-bottom: 4px solid #FB6C20 !important;
-			}
+		.tab{
+			.info{
+				margin-top: 50px;
+				margin-bottom: 50px;
 
-			.nav .uib-tab:hover{
-				border-bottom: 4px solid FB6C20;
-			}
-
-			form{
-				margin-top: 15px;
-				margin-bottom: 15px;
-
-				.ng-invalid.ng-dirty{
-					border-color: #FA787E;
+				.tab-content{
+					border-bottom: 4px solid #FB6C20;
 				}
-				.ng-valid.ng-dirty{
-					border-color: #78FA89;
+
+				.p{
+					padding: 10px;
+				}
+
+				.nav .uib-tab uib-tab-heading{
+					font-size: 110%;
+					color: #FB6C20;
+					i {
+						font-size: 170%;
+					}
+				}
+
+				.nav .uib-tab.active{
+					border-bottom: 4px solid #FB6C20 !important;
+				}
+
+				.nav .uib-tab:hover{
+					border-bottom: 4px solid FB6C20;
+				}
+
+				form{
+					margin-top: 15px;
+					margin-bottom: 15px;
+
+					.ng-invalid.ng-dirty{
+						border-color: #FA787E;
+					}
+					.ng-valid.ng-dirty{
+						border-color: #78FA89;
+					}
 				}
 			}
 		}
