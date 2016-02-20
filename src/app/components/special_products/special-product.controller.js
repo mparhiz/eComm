@@ -2,15 +2,16 @@
   'use strict';
 
   angular
-    .module('specialproducts')
+    .module('specialProducts')
     .controller('specialProductsController', specialProductsController);
 
-  function specialProductsController(SpecialProductsService, URL_MAPPINGS) {
+  function specialProductsController(SpecialProductsService) {
     var vm = this;
 
-    SpecialProductsService.retrieveTabsInfo(URL_MAPPINGS.TABSINFO_URL).then( function(tabs) {
-      vm.tabs = tabs;
-    });
+    SpecialProductsService.retrieveTabsInfo()
+      .then( function(tabs) {
+        vm.tabs = tabs;
+      });
   }
 
 })();

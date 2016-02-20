@@ -2,16 +2,16 @@
   'use strict';
 
   angular
-    .module('specialproducts')
+    .module('specialProducts')
     .service('SpecialProductsService',SpecialProductsService);
 
-  function SpecialProductsService($http) {
+  function SpecialProductsService($http, URL_MAPPINGS) {
     return {
-      retrieveTabsInfo: function(_url_){
-        return $http.get(_url_)
-        .then(function succssCallback(response){
-          return response.data
-        });
+      retrieveTabsInfo: function(){
+        return $http.get(URL_MAPPINGS.TABSINFO_URL)
+          .then(function succssCallback(response){
+            return response.data
+          });
       }
     }
   }

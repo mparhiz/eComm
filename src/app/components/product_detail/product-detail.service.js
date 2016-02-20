@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('productdetail')
+		.module('productDetail')
 		.service('GetProductDetailImageService', GetProductDetailImageService);
 
 		function GetProductDetailImageService($http){

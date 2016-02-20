@@ -17,17 +17,18 @@
         templateUrl: 'app/home/home.html'
       })
       .state('main.products', {
-        url: '/products',
+        url: '/products/:category/:special',
         templateUrl: 'app/products/products.html',
         params: {
-          type: null
+          category: null,
+          special: null
         }
       })
       .state('main.detail', {
-        url: '/products/detail/:specials/:productId',
+        url: '/products/detail/:special/:productId',
         templateUrl: 'app/components/product_detail/product-detail.html',
         params: {
-          specials: null,
+          special: null,
           productId: null
         }
       })

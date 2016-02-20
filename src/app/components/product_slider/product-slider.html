@@ -2,7 +2,7 @@
   <uib-carousel interval="productSliderCtrl.setInterval" no-wrap="productSliderCtrl.noWrapSlides">
     <uib-slide ng-repeat="productGroup in productSliderCtrl.arrayOfProductGroup" active="slide.active">
       <div ng-repeat="product in productGroup">
-        <ec-product-block item="product" specials="productSliderCtrl.tabName"></ec-product-block>
+        <ec-product-block item="product" special="productSliderCtrl.tabName"></ec-product-block>
       </div>
     </uib-slide>
   </uib-carousel>

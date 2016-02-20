@@ -1,31 +1,28 @@
-<div class="container">
-  <div class="row" id="tiles">
-    <div class="col-md-5">
-      <div >
-        <img class="tile1" src="assets/images/cloth-products.jpg" ><div class="band"><span>Cloth</span></div>
-      </div>
+<div id="tiles" class="container">
+  <div class="row">
+
+    <div class="tile1 col-md-5">
+      <p class="band">Cloth</p>
+      <a ui-sref="main.products({category: 'cloth', special: 'all'})"><img src="assets/images/cloth-products.jpg" ></a>
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-6">
+
+    <div class="col-md-6 col-md-offset-1">
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="tile2">
-            <img src="assets/images/e-products1.png" ><div class="band"><span>Electronic</span></div>
-          </div>
+        <div class="tile2 col-md-8">
+          <div class="band"><p>Electronic</p></div>
+          <a ui-sref="main.products({category: 'electronic', special: 'all'})"><img src="assets/images/e-products2.png" ></a>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-5">
-          <div class="tile3">
-            <img src="assets/images/baby-products.jpg" ><div class="band"><span>Baby</span></div>
-          </div>
+      <div class="tile1_2 row">
+        <div class="tile3 col-md-5">
+          <div class="band"><p>Baby</p></div>
+          <a ui-sref="main.products({category: 'baby', special: 'all'})"><img src="assets/images/baby-products.jpg" ></a>
         </div>
         <div class="col-md-2"></div>
-        <div class="col-md-5">
-          <div class="tile4">
-            <img src="assets/images/food-products.jpg" ><div class="band"><span>Food</span></div>
-          </div>
+        <div class="tile4 col-md-5">
+          <div class="band"><p>Food</p></div>
+          <a ui-sref="main.products({category: 'food', special: 'all'})"><img src="assets/images/food-products.jpg" ></a>
         </div>
       </div>
     </div>

@@ -10,6 +10,18 @@
     status: 200
     file: "category-1-products.json"
 
+#########################################
+#
+# Retrieving the list of all products
+#
+#########################################
+- request:
+    url: /api/products
+    method: GET
+  response:
+    status: 200
+    file: "products.json"
+
 ##############################################################################
 #
 # Retrieving the list of navbar titels for showing on the navbar of main page.

@@ -1,4 +1,62 @@
-<div id="products" class="container">
-  <h1>Products</h1>
-	<p>Comming Soon...</p>
+<div id="products" ng-controller="ProductsController as ProductCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-md-offset-3">
+				<form class="form-inline">
+					<fieldset class="form-group col-md-4 col-md-offset-1">
+						<label>Specials</label>
+						<select class="form-control form-control-sm">
+							
+						</select>
+					</fieldset>
+					<fieldset class="form-group col-md-4">
+						<label>Sort By</label>
+						<select class="form-control form-control-sm">
+							
+						</select>
+					</fieldset>
+					<fieldset class="form-group col-md-3">
+						<label>Item/Page</label>
+						<select class="form-control form-control-sm">
+							
+						</select>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="searchBlock col-md-3">
+				<form>
+					<fieldset class="form-group">
+						<label>Categories</label>
+						<select class="form-control form-control-sm">
+							
+						</select>
+					</fieldset>
+					<fieldset class="form-group">
+						<label>Sub Categories</label>
+						<select class="form-control form-control-sm">
+							
+						</select>
+					</fieldset>
+					<fieldset class="row form-group">
+						<div class="col-md-2">
+							<label>Price</label>
+						</div>
+						<div class="col-md-4">
+							<div class="form-inline"><label><small>From </small><input type="text" class="form-control form-control-sm" ></label></div>
+							<div class="form-inline"><label><small>To </small><input type="text" class="form-control form-control-sm" ></label></div>
+						</div>
+					</fieldset>
+					<h3>Categories:</h3>
+				</form>
+			</div>
+			<div class="blocks col-md-9">
+				<div ng-repeat="product in ProductCtrl.products">
+					<ec-product-block item="product" special="ProductCtrl.special"></ec-product-block>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

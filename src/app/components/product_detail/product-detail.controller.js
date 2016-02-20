@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('productdetail')
+		.module('productDetail')
 		.controller('productDetailController', productDetailController);
 
 	function productDetailController($stateParams, GetProductDetailImageService, mainService, toastr){
@@ -16,11 +16,12 @@
 		vm.product = {};
 		vm.mainImage = '';
 		vm.arrayOfImageGroup = [];
-		vm.specials = $stateParams.specials;
+		vm.specials = $stateParams.special;
 		vm.productId = $stateParams.productId;
 		vm.groupSize = 4;
 		vm.review = {};
 		vm.reviews = [];
+		vm.qty = 1;
 
 		if (vm.specials != null) {
 			mainService.retriveSpecialProductsData(vm.specials)

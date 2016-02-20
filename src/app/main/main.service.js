@@ -43,7 +43,7 @@
           case 'clearances':
               _url_ = URL_MAPPINGS.CLEARANCES_URL;
               break;
-          case 'normal':
+          case 'all':
               _url_ = URL_MAPPINGS.PRODUCTS_URL;
               break;
         }  

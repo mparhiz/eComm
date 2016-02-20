@@ -10,7 +10,8 @@
       'TOPPICKS_URL': 'api/main/toppicks',
       'NEWPRODUCTS_URL': 'api/main/newproducts',
       'CLEARANCES_URL': 'api/main/clearances',
-      'TABSINFO_URL': 'api/main/special/tabs'
+      'TABSINFO_URL': 'api/main/special/tabs',
+      'PRODUCTS_URL': 'api/products'
     });
 
 })();

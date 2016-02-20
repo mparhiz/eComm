@@ -1,13 +1,8 @@
 <div id="productDetail" ng-controller="productDetailController as productDetailCtrl">
-
-	<div class="backgroundImage col-lg-12 hidden-md hidden-sm hidden-xs">
-		<img src="{{productDetailCtrl.product.imageUrl}}">
-	</div>
-
 	<div class="body container">
 		<div class="row product-info">
 			<div class="col-md-6 pictures">
-				<img class="img-rounded" src="{{productDetailCtrl.mainImage}}" alt="{{productDetailCtrl.product.name}}">
+				<img class="img-rounded img-thumbnail" src="{{productDetailCtrl.mainImage}}" alt="{{productDetailCtrl.product.name}}">
 
 				<div class="row">
 					
@@ -33,7 +28,7 @@
 				<br />
 				<form class="form-inline">
 					<label>Qty
-						<select class="form-control" ng-model="no_" ng-options="i for i in productDetailCtrl.listOfDefaultQtys">
+						<select class="form-control" ng-model="productDetailCtrl.qty" ng-options="i for i in productDetailCtrl.listOfDefaultQtys">
 							<option></option>
 						</select>
 					</label>
@@ -97,8 +92,8 @@
 										</div>
 										<div class="form-group">
 											<label>By:</label>
-											<input type="text" class="form-control" placeholder="Full Name..." ng-model="productDetailCtrl.review.author.fullName"></input>
-											<input name="email" type="email" class="form-control" placeholder="email..." ng-model="productDetailCtrl.review.author.email" uib-popover="{{reviewForm.email.$error.email?'Invalid Email!':''}}" popover-trigger="mouseenter" popover-placement="right" ></input>
+											<input type="text" class="form-control" placeholder="Full Name..." ng-model="productDetailCtrl.review.author.fullName">
+											<input name="email" type="email" class="form-control" placeholder="email..." ng-model="productDetailCtrl.review.author.email" uib-popover="{{reviewForm.email.$error.email?'Invalid Email!':''}}" popover-trigger="mouseenter" popover-placement="right" >
 										</div>
 										<button type="submit" class="btn btn-primary" uib-popover="{{reviewForm.rate.$valid ? (reviewForm.desc.$valid ? '':'Enter your idea!'):'Rating is required!'}}" popover-trigger="mouseenter" popover-placement="right" >Submit</button>
 									</form>
