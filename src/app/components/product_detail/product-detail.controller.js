@@ -42,7 +42,7 @@
 								vm.images = images;
 
 								if (angular.isDefined(vm.images.imagesUrl)) {
-									vm.arrayOfImageGroup = mainService.setupObjectArray(vm.images.imagesUrl, vm.groupSize);
+									vm.arrayOfImageGroup = _.chunk(vm.images.imagesUrl, vm.groupSize);
 								}
 							});
 					}

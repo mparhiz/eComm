@@ -26,7 +26,7 @@
       
       mainService.retriveSpecialProductsData(vm.tabName)
         .then(function(products){
-          vm.arrayOfProductGroup = mainService.setupObjectArray(products, vm.groupSize);
+          vm.arrayOfProductGroup = _.chunk(products, vm.groupSize);
         });
     }
   }
