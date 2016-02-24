@@ -1,7 +1,7 @@
 <div ui-view>
 	<div id="productBlock">
 		<a ui-sref="main.detail({special: productBlockCtrl.special, productId: productBlockCtrl.item.id})">
-			<h3>{{item.name}}</h3>
+			<h3>{{productBlockCtrl.item.name}}</h3>
 			<img src="{{productBlockCtrl.item.imageUrl}}" alt="{{productBlockCtrl.item.name}}"><br>
 			<h3>{{productBlockCtrl.item.price | currency}}</h3>
 			<button class="btn btn-default" ng-click="" >Buy Me!</button>

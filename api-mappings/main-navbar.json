@@ -6,7 +6,7 @@
   },
   {
     "title": "Products",
-    "state": "main.products",
+    "state": "main.products({category: '', special: 'all'})",
     "status": "none"
   },
   {

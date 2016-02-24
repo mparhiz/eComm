@@ -1,24 +1,22 @@
-<div id="products" ng-controller="ProductsController as ProductCtrl">
+<div id="products" ng-controller="ProductsController as ProductsCtrl">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 col-md-offset-3">
 				<form class="form-inline">
-					<fieldset class="form-group col-md-4 col-md-offset-1">
+					<fieldset class="form-group col-md-4 ">
 						<label>Specials</label>
-						<select class="form-control form-control-sm">
+						<select class="form-control form-control-sm" ng-model="ProductsCtrl.selectedSpecial" ng-options="i.title for i in ProductsCtrl.specials" ng-change="ProductsCtrl.refreshPage();">
 							
 						</select>
 					</fieldset>
-					<fieldset class="form-group col-md-4">
+					<fieldset class="form-group col-md-5">
 						<label>Sort By</label>
-						<select class="form-control form-control-sm">
-							
+						<select class="form-control form-control-sm" ng-options="i.value for i in ProductsCtrl.sortBy.availableOptions" ng-model="ProductsCtrl.sortBy.selectedOption" ng-change="ProductsCtrl.refreshPage();">
 						</select>
 					</fieldset>
 					<fieldset class="form-group col-md-3">
 						<label>Item/Page</label>
-						<select class="form-control form-control-sm">
-							
+						<select class="form-control form-control-sm" ng-model="ProductsCtrl.itemPerPage.selectedOption" ng-options="i for i in ProductsCtrl.itemPerPage.availableOptions" ng-change="ProductsCtrl.refreshPage();">
 						</select>
 					</fieldset>
 				</form>
@@ -53,9 +51,16 @@
 				</form>
 			</div>
 			<div class="blocks col-md-9">
-				<div ng-repeat="product in ProductCtrl.products">
-					<ec-product-block item="product" special="ProductCtrl.special"></ec-product-block>
-				</div>
+				<data class="row">
+					<div ng-repeat="product in ProductsCtrl.products">
+						<ec-product-block item="product" special="ProductsCtrl.selectedSpecial.tabName"></ec-product-block>
+					</div>
+				</data>
+				<dir class="row">
+					<dir class="col-md-6 col-md-offset-3">
+						<uib-pagination total-items="ProductsCtrl.totalItems" ng-model="ProductsCtrl.currentPage" max-size="ProductsCtrl.maxSize" items-per-page="ProductsCtrl.itemPerPage.selectedOption" ng-change="ProductsCtrl.refreshPage()" class="pagination-sm" boundary-links="true" rotate="false"></uib-pagination>
+					</dir>
+				</dir>
 			</div>
 		</div>
 	</div>

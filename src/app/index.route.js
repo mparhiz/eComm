@@ -17,11 +17,11 @@
         templateUrl: 'app/home/home.html'
       })
       .state('main.products', {
-        url: '/products/:category/:special',
+        url: '/products/:special/:category',
         templateUrl: 'app/products/products.html',
         params: {
-          category: null,
-          special: null
+          special: null,
+          category: null
         }
       })
       .state('main.detail', {
