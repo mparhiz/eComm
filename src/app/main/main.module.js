@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-   .module('main', ['navbar', 'carousel', 'productSlider', 'specialProducts', 'productDetail', 'productBlock', 'products']);
+   .module('main', ['base64', 'navbar', 'carousel', 'productSlider', 'specialProducts', 'productDetail', 'productBlock', 'products']);
 
 })();
