@@ -60,7 +60,7 @@
 			if ((vm.selectedSpecial == null) || (_.isUndefined(vm.selectedSpecial))) {
 				vm.selectedSpecial = { "title" : "", "icon" : "", "tabName" : "all"};
 			}
-*/
+			*/
 			
 			mainService.retriveSpecialProductsData(vm.selectedSpecial.tabName)
 				.then(function(products){
@@ -71,7 +71,6 @@
 
 					vm.products = vm.limitTo(vm.products, vm.currentPage*vm.itemPerPage.selectedOption);
 					vm.products = vm.limitTo(vm.products, -1*vm.itemPerPage.selectedOption);
-					
 			});
 		}
 

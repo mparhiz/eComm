@@ -2,7 +2,7 @@
 	<div class="body container">
 		<div class="row product-info">
 			<div class="col-md-6 pictures">
-				<img class="img-rounded img-thumbnail" src="{{productDetailCtrl.mainImage}}" alt="{{productDetailCtrl.product.name}}">
+				<img class="img-rounded img-thumbnail" src="{{productDetailCtrl.mainImage | retriveFromCache}}" alt="{{productDetailCtrl.product.name}}">
 
 				<div class="row">
 					
@@ -11,7 +11,7 @@
 							<uib-carousel interval="productDetailCtrl.setInterval" no-wrap="productDetailCtrl.noWrapSlides">
 								<uib-slide ng-repeat="imageGroup in productDetailCtrl.arrayOfImageGroup" active="slide.active">
 									<div>
-										<a ng-repeat="image in imageGroup" ng-click="productDetailCtrl.changeImage(image);" href=""><img class="img-thumbnail" ng-src="{{image}}"></a>
+										<a ng-repeat="image in imageGroup" ng-click="productDetailCtrl.changeImage(image);" href=""><img class="img-thumbnail" ng-src="{{image | retriveFromCache}}"></a>
 									</div>
 								</uib-slide>
 							</uib-carousel>
