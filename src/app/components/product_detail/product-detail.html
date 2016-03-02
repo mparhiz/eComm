@@ -33,7 +33,7 @@
 						</select>
 					</label>
 				</form><br />
-				<button class="btn btn-primary" ng-click="">Add to Cart</button>
+				<button class="btn btn-primary" ng-click="">{{"BUTTON_ADD_TO_CART" | translate}}</button>
 				<div class="align-left">
 					<h4>Category: <small>{{productDetailCtrl.product.category}}</small></h4>
 					<h4>Postage: <small>AUD {{productDetailCtrl.product.postage | currency}} Economy delivery from outside AU</small></h4>
@@ -49,25 +49,25 @@
 					<uib-tabset justified="true">
 						<uib-tab>
 							<uib-tab-heading>
-								<p>DESCRIPTION</p>
+								<p>{{"PRODUCT_DETAIL_TAB_1" | translate}}</p>
 							</uib-tab-heading>
 							<p class="p">{{productDetailCtrl.product.desc}}</p>
 						</uib-tab>
 						<uib-tab>
 							<uib-tab-heading>
-								<p>SPECIFICS</p>
+								<p>{{"PRODUCT_DETAIL_TAB_2" | translate}}</p>
 							</uib-tab-heading>
 							<p class="p">{{productDetailCtrl.product.spec}}</p>
 						</uib-tab>
 						<uib-tab>
 							<uib-tab-heading>
-								<p>DELIVERY</p>
+								<p>{{"PRODUCT_DETAIL_TAB_3" | translate}}</p>
 							</uib-tab-heading>
 							<p class="p">{{productDetailCtrl.product.delivery}}</p>
 						</uib-tab>
 						<uib-tab>
 							<uib-tab-heading>
-								<p>REVIEW</p>
+								<p>{{"PRODUCT_DETAIL_TAB_4" | translate}}</p>
 							</uib-tab-heading>
 							<div class="row">
 								<div class="col-md-6">

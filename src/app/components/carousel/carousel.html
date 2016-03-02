@@ -3,7 +3,7 @@
     <uib-slide ng-repeat="slide in carouselCtrl.slides" active="slide.active">
       <img ng-src="{{slide.image}}">
       <div class="carousel-caption">
-        <h2>{{slide.caption}}</h2>
+        <h2>{{slide.caption | translate}}</h2>
       </div>
     </uib-slide>
   </uib-carousel>

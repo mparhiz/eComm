@@ -118,6 +118,18 @@
     status: 200
     file: "product-<%= params.id %>-images.json"
 
+##########################################################################################################
+#
+# Retrieving the list of translated keys to use for keywords on the pages.
+#
+##########################################################################################################
+- request:
+    url: /api/translation/keys
+    method: GET
+  response:
+    status: 200
+    file: "translation-keys.json"
+
 #- request:
 #    url: /api/users
 #    method: POST

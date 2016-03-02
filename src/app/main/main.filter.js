@@ -3,7 +3,8 @@
 
 	angular
 		.module('main')
-		.filter('retriveFromCache', retriveFromCache);
+		.filter('retriveFromCache', retriveFromCache)
+		.filter('translate', translate);
 
 		function retriveFromCache(imageCacheService){
 			return function(imageUrl){
@@ -48,4 +49,9 @@
 			}
 		}
 */
+		function translate(translationKeysService){
+			return function(_key){
+				return translationKeysService.retriveTranslatedKey(_key);
+			}
+		}
 })();

@@ -1,18 +1,18 @@
 [
   {
     "image": "assets/images/sectors-consumer-products.jpg",
-    "caption": "eShopping"
+    "caption": "CAROUSEL_TITLE_1"
   },
   {
     "image": "assets/images/cloth-products2.jpg",
-    "caption": "Cloth"
+    "caption": "CAROUSEL_TITLE_2"
   },
   {
     "image": "assets/images/Electronic-Products.jpg",
-    "caption": "Electrinic"
+    "caption": "CAROUSEL_TITLE_3"
   },
   {
     "image": "assets/images/Internet-of-Things.jpg",
-    "caption": "Product"
+    "caption": "CAROUSEL_TITLE_4"
   }
 ]

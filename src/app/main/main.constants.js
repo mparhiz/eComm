@@ -11,7 +11,8 @@
       'NEWPRODUCTS_URL': 'api/main/newproducts',
       'CLEARANCES_URL': 'api/main/clearances',
       'TABSINFO_URL': 'api/main/special/tabs',
-      'PRODUCTS_URL': 'api/products'
+      'PRODUCTS_URL': 'api/products',
+      'TRANSLATION_KEYS': 'api/translation/keys'
     });
 
 })();

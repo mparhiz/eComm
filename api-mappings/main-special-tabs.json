@@ -1,22 +1,22 @@
 [
   {
-    "title" : "Hot Offers",
+    "title" : "SPECIAL_TAB_1",
     "icon" : "glyphicon glyphicon-fire",
     "tabName" : "hotoffers"
 
   },
   {
-    "title" : "New Products",
+    "title" : "SPECIAL_TAB_2",
     "icon" : "glyphicon glyphicon-check",
     "tabName" : "newproducts"
   },
   {
-    "title" : "Top Picks",
+    "title" : "SPECIAL_TAB_3",
     "icon" : "glyphicon glyphicon-arrow-up",
     "tabName" : "toppicks"
   },
   {
-    "title" : "Clearances",
+    "title" : "SPECIAL_TAB_4",
     "icon" : "glyphicon glyphicon-bullhorn",
     "tabName" : "clearances"
   }

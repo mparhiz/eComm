@@ -1,26 +1,26 @@
 [
   {
-    "title": "Home",
+    "title": "NAV_HOME",
     "state": "main.home",
     "status": "active"
   },
   {
-    "title": "Products",
+    "title": "NAV_PRODUCTS",
     "state": "main.products({category: '', special: 'all'})",
     "status": "none"
   },
   {
-    "title": "Sale",
+    "title": "NAV_SALE",
     "state": "main.sale",
     "status": "none"
   },
   {
-    "title": "About Us",
+    "title": "NAV_ABOUT",
     "state": "main.about",
     "status": "none"
   },
   {
-    "title": "Contact Us",
+    "title": "NAV_CONTACT",
     "state": "main.contact",
     "status": "none"
   }

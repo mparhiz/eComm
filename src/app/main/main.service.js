@@ -5,8 +5,8 @@
         .module('main')
         .service('mainService', mainService)
         .service('imageCacheService', imageCacheService)
-        .service('retriveData', retriveData)
-        .service('imageCacheServiceViaFileReader', imageCacheServiceViaFileReader);
+        .service('imageCacheServiceViaFileReader', imageCacheServiceViaFileReader)
+        .service('translationKeysService', translationKeysService);
 
         function mainService($http, URL_MAPPINGS) {
             return {
@@ -149,13 +149,20 @@
             }
         }
 
-        function retriveData($http){
+        function translationKeysService($cacheFactory, $http, URL_MAPPINGS){
+            var vm = this;
+            vm.cache = $cacheFactory('translateCache');
+            $http.get(URL_MAPPINGS.TRANSLATION_KEYS)
+                .then(function successCallback(response){
+                    angular.forEach(response.data, function(value, key){
+                        vm.cache.put(key,value);
+                    });
+                });
+
             return {
-                retriveFromUrl: function(url_){
-                    return $http.get(url_)
-                        .then(function successCallback(response){
-                            return response.data;
-                        });
+                retriveTranslatedKey: function(_key){
+                    var translatedKey = vm.cache.get(_key);
+                    return (angular.isUndefined(translatedKey)) ? "no translate" : translatedKey;
                 }
             }
         }
