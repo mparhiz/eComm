@@ -51,7 +51,7 @@ module.exports = function(config) {
 
     ngHtml2JsPreprocessor: {
       stripPrefix: conf.paths.src + '/',
-      moduleName: 'eComm'
+      moduleName: 'eComm.templates'
     },
 
     logLevel: 'WARN',

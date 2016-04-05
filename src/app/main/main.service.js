@@ -1,3 +1,4 @@
+/* global _ */
 (function() {
     'use strict';
 
@@ -35,6 +36,21 @@
                         .then(function successCallback(response){
                             return response.data;
                         });
+                },
+                retriveCategories: function(){
+                    return $http.get(URL_MAPPINGS.PRODUCTS_URL)
+                        .then(function successCallback(response){
+                            var categories = _.uniq(_.map(response.data, 'category'));
+                            return categories;
+                        });
+
+                },
+                retriveSubCategories: function(category_){
+                    return $http.get(URL_MAPPINGS.PRODUCTS_URL)
+                        .then(function successCallback(response){
+                            var subcategories = _.uniq(_.map((_.filter(response.data, ['category', category_])), 'subCategory'));
+                            return subcategories;
+                        });                    
                 }
             }
         }

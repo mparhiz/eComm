@@ -30,13 +30,14 @@ describe('CarouselService' ,function() {
       $httpBackend.flush();
       $rootScope.$digest();
     });
-
+/*
     it('should return a single slide if 3 slides are provided.', function() {
       CarouselService.retrieveOddSlides()
         .then(function(oddSlides) {
           expect(oddSlides.length).toBe(2);
         });
     });
+/*
     it('should return the 2nd slide if 3 slides are provided.', function() {
       CarouselService.retrieveOddSlides()
         .then(function(oddSlides) {
@@ -44,5 +45,6 @@ describe('CarouselService' ,function() {
           expect(oddSlides[1].title).toBe(allSlides[3].title);
         });
     });
+*/
   });
 });

@@ -3,20 +3,15 @@
 		<div class="row">
 			<div class="col-md-9 col-md-offset-3">
 				<form class="form-inline">
-					<fieldset class="form-group col-md-4 ">
-						<label>Specials</label>
-						<select class="form-control form-control-sm" ng-model="ProductsCtrl.selectedSpecial" ng-options="i.title for i in ProductsCtrl.specials" ng-change="ProductsCtrl.refreshPage();">
-							
-						</select>
-					</fieldset>
+					<dir class="col-md-4"></dir>
 					<fieldset class="form-group col-md-5">
 						<label>Sort By</label>
-						<select class="form-control form-control-sm" ng-options="i.value for i in ProductsCtrl.sortBy.availableOptions" ng-model="ProductsCtrl.sortBy.selectedOption" ng-change="ProductsCtrl.refreshPage();">
+						<select class="form-control form-control-sm" ng-options="i.value for i in ProductsCtrl.sortBy.availableOptions" ng-model="ProductsCtrl.sortBy.selectedOption" ng-change="ProductsCtrl.limiteOnPage();">
 						</select>
 					</fieldset>
 					<fieldset class="form-group col-md-3">
 						<label>Item/Page</label>
-						<select class="form-control form-control-sm" ng-model="ProductsCtrl.itemPerPage.selectedOption" ng-options="i for i in ProductsCtrl.itemPerPage.availableOptions" ng-change="ProductsCtrl.refreshPage();">
+						<select class="form-control form-control-sm" ng-model="ProductsCtrl.itemPerPage.selectedOption" ng-options="i for i in ProductsCtrl.itemPerPage.availableOptions" ng-change="ProductsCtrl.limiteOnPage();">
 						</select>
 					</fieldset>
 				</form>
@@ -27,38 +22,50 @@
 			<div class="searchBlock col-md-3">
 				<form>
 					<fieldset class="form-group">
-						<label>Categories</label>
-						<select class="form-control form-control-sm">
+						<label>Specials</label>
+						<select class="form-control form-control-sm" ng-model="ProductsCtrl.selectedSpecial" ng-options="((i.title | translate)=='no translate'?'':(i.title | translate)) for i in ProductsCtrl.specials" ng-change="ProductsCtrl.retriveProductsOnPage();">
 							
+						</select>
+					</fieldset>
+<!--
+					<fieldset class="form-group">
+						<label>Categories</label>
+						<select class="form-control form-control-sm" ng-model="ProductsCtrl.selectedCategory" ng-options="i for i in ProductsCtrl.categories" ng-change="ProductsCtrl.retriveSubCategories(ProductsCtrl.selectedCategory); ProductsCtrl.refreshOnPage();">
 						</select>
 					</fieldset>
 					<fieldset class="form-group">
 						<label>Sub Categories</label>
-						<select class="form-control form-control-sm">
-							
+						<select class="form-control form-control-sm" ng-model="ProductsCtrl.selectedSubCategory" ng-options="i for i in ProductsCtrl.subCategories" ng-change="ProductsCtrl.refreshOnPage();">
 						</select>
 					</fieldset>
-					<fieldset class="row form-group">
-						<div class="col-md-2">
-							<label>Price</label>
+-->
+					<label>Price</label>
+					<dir class="row">
+						<div class="col-md-5">
+							<small>From </small><input type="text" class="form-control form-control-sm" ng-model="ProductsCtrl.priceFrom">
 						</div>
-						<div class="col-md-4">
-							<div class="form-inline"><label><small>From </small><input type="text" class="form-control form-control-sm" ></label></div>
-							<div class="form-inline"><label><small>To </small><input type="text" class="form-control form-control-sm" ></label></div>
+						<div class="col-md-5">
+							<small>To </small><input type="text" class="form-control form-control-sm" ng-model="ProductsCtrl.priceTo">
 						</div>
-					</fieldset>
+						<dir class="col-md-2">
+							<input type="button" value=">>" class="btn btn-primary" ng-click="ProductsCtrl.refreshOnPage();">
+						</dir>
+					</dir>					
 				</form>
 				<h3>Categories:</h3>
+				<dir class="tree">
+					<flat-tree tree-data="ProductsCtrl.treeData" selected-node="ProductsCtrl.showSelected(node)"></flat-tree>
+				</dir>
 			</div>
 			<div class="blocks col-md-9">
 				<data class="row">
-					<div ng-repeat="product in ProductsCtrl.products">
+					<div ng-repeat="product in ProductsCtrl.displayProducts">
 						<ec-product-block item="product" special="ProductsCtrl.selectedSpecial.tabName"></ec-product-block>
 					</div>
 				</data>
 				<dir class="row">
 					<dir class="col-md-6 col-md-offset-3">
-						<uib-pagination total-items="ProductsCtrl.totalItems" ng-model="ProductsCtrl.currentPage" max-size="ProductsCtrl.maxSize" items-per-page="ProductsCtrl.itemPerPage.selectedOption" ng-change="ProductsCtrl.refreshPage()" class="pagination-sm" boundary-links="true" rotate="false"></uib-pagination>
+						<uib-pagination total-items="ProductsCtrl.totalItems" ng-model="ProductsCtrl.currentPage" max-size="ProductsCtrl.maxSize" items-per-page="ProductsCtrl.itemPerPage.selectedOption" ng-change="ProductsCtrl.refreshOnPage()" class="pagination-sm" boundary-links="true" rotate="false"></uib-pagination>
 					</dir>
 				</dir>
 			</div>
