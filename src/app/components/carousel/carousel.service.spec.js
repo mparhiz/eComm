@@ -1,3 +1,4 @@
+'use strict'
 describe('CarouselService' ,function() {
   var CarouselService,
     $rootScope,

@@ -43,18 +43,18 @@
 		
 		mainService.retriveCategories()
 			.then(function(categories){
-				vm.categories = categories;
-				vm.categories = _.reverse(_.concat(_.reverse(vm.categories), ['']));
+				vm.categories = _.concat([''], categories);
 				vm.selectedCategory = vm.categories[0];
 			});
 
 		SpecialProductsService.retrieveTabsInfo()
 			.then( function(tabs) {
-				vm.specials = tabs;
-				vm.specials = _.reverse(_.concat(_.reverse(vm.specials), { "title" : "", "icon" : "", "tabName" : "all"}));
+				vm.specials = _.concat({ "title" : "", "icon" : "", "tabName" : "all"}, tabs);
 
 				vm.selectedSpecial = _.find(vm.specials, ['tabName' , vm.special]);
 
+				vm.retriveProductsOnPage();
+/*
 				mainService.retriveSpecialProductsData(vm.selectedSpecial.tabName)
 					.then(function(products){
 						vm.products = products;
@@ -64,6 +64,7 @@
 						vm.displayProducts = vm.limitTo(vm.displayProducts, -1*vm.itemPerPage.selectedOption);
 						vm.treeData = vm.createTreeOfCategories(products);
 					});
+*/
 			});
 
 		vm.showSelected = function(node_){
@@ -83,12 +84,11 @@
 			vm.selectedSubCategory = "";
 			mainService.retriveSubCategories(category_)
 				.then(function(subCategories){
-					vm.subCategories = subCategories;
-					vm.subCategories = _.reverse(_.concat(_.reverse(vm.subCategories), ['']));
+					vm.subCategories = _.concat([''], subCategories);
 				});		
 		}
 
-		vm.limiteOnPage = function(){
+		vm.limitOnPage = function(){
 			vm.totalItems = vm.displayProducts.length;
 			vm.displayProducts = vm.orderBy(vm.displayProducts, vm.sortBy.selectedOption.key, vm.sortBy.selectedOption.reverse);
 			vm.displayProducts = vm.limitTo(vm.displayProducts, vm.currentPage*vm.itemPerPage.selectedOption);
@@ -103,7 +103,7 @@
 					vm.selectedCategory = '';
 					vm.selectedSubCategory = '';
 					vm.subCategories = '';
-					vm.limiteOnPage();
+					vm.limitOnPage();
 					vm.treeData = vm.createTreeOfCategories(products);
 				});
 		}
@@ -129,7 +129,7 @@
 				displayProductsTemp = _.filter(displayProductsTemp, function(o) { return (o.price <= vm.priceTo && o.price >= vm.priceFrom); });
 			}
 			vm.displayProducts = displayProductsTemp;
-			vm.limiteOnPage();
+			vm.limitOnPage();
 		}
 
 		vm.createTreeOfCategories = function(_products){
