@@ -14,6 +14,11 @@ You need to install the latest [Node.js](http://nodejs.org/download/) at the fir
 npm install -g yo
 ```
 
+* Install gulp-angular generator for Yeoman: 
+```
+npm install -g generator-gulp-angular
+```
+
 * Create eComm (working directory) folder, and go into: 
 ```
 mkdir eComm && cd $_
