@@ -25,7 +25,7 @@ yo gulp-angular
 ```
     Note: Don't select the unnecessary options except Less, like the below picture:
 
-<img src="https://github.com/mparhiz/eComm/img/iPhoneList.png">
+<img src="https://github.com/mparhiz/eComm/img/eComm.png">
 
 * Delete the unnecessary folders and files:
 ```
