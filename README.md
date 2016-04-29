@@ -21,7 +21,8 @@ npm install -g generator-gulp-angular
 
 * Create eComm (working directory) folder, and go into: 
 ```
-mkdir eComm && cd $_
+mkdir eComm
+cd eComm
 ```
 
 * Run the below command and select desired technologies:
@@ -34,7 +35,7 @@ yo gulp-angular
 
 * Delete the unnecessary folders and files:
 ```
-rm -r src bower-components
+rm -r src bower_components
 ```
 * Exit from the current folder and clone this repository
 ```
