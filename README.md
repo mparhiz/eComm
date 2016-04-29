@@ -24,7 +24,8 @@ mkdir eComm && cd $_
 yo gulp-angular
 ```
     Note: Don't select the unnecessary options except Less, like the below picture:
-    <img src="https://github.com/mparhiz/eComm/edit/master/iPhoneList.png">
+
+<img src="https://github.com/mparhiz/eComm/img/iPhoneList.png">
 
 * Delete the unnecessary folders and files:
 ```
