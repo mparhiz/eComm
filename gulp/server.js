@@ -9,9 +9,19 @@ var browserSyncSpa = require('browser-sync-spa');
 
 var util = require('util');
 
+var proxyMiddleware = require('http-proxy-middleware');
+
+var http = require('http');
+var connect = require('connect');
 var bodyParser = require('body-parser');
 var apiMock = require('apimock-middleware');
+var app = connect();
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(apiMock('./api-mappings/mappings.yml'));
+
+http.createServer(app).listen(3000);
 
 function browserSyncInit(baseDir, browser) {
   browser = browser === undefined ? 'default' : browser;
@@ -26,7 +36,7 @@ function browserSyncInit(baseDir, browser) {
   var server = {
     baseDir: baseDir,
     routes: routes,
-    middleware: [
+	middleware: [
       bodyParser.json(),
       apiMock('./api-mappings/mappings.yml')
     ]
