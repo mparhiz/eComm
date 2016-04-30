@@ -9,41 +9,12 @@ The eComm is aimed to be a modular platform which allows merchants to configure,
 ###
 You need to install the latest [Node.js](http://nodejs.org) at the first.
 
-* You need to install Yeoman to scaffolding the application: 
+* clone this repository:
 ```
-npm install -g yo
-```
-
-* Install gulp-angular generator for Yeoman: 
-```
-npm install -g generator-gulp-angular
-```
-
-* Create eComm (working directory) folder, and go into: 
-```
-mkdir eComm
-cd eComm
-```
-
-* Run the below command and select desired technologies:
-```
-yo gulp-angular
-```
-    Note: Don't select the unnecessary options except Less, like the below picture:
-
-<img src="img/eComm.png">
-
-* Delete the unnecessary folders and files:
-```
-rm -r src bower_components
-```
-* Exit from the current folder and clone this repository
-```
-cd ..
 git clone https://github.com/mparhiz/eComm.git
 ```
 
-* Go into the eComm folder again and run the below commands:
+* Go into the eComm folder and run the npm and bower commands to install desired tools:
 ```
 cd eComm
 npm install
