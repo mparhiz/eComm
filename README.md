@@ -7,7 +7,7 @@ The eComm is aimed to be a modular platform which allows merchants to configure,
 
 ## Installation
 ###
-You need to install the latest [Node.js](http://nodejs.org/download/) at the first.
+You need to install the latest [Node.js](http://nodejs.org) at the first.
 
 * You need to install Yeoman to scaffolding the application: 
 ```
