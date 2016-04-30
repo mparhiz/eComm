@@ -1,6 +1,6 @@
 {
   "name": "eComm",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "angular-ui-router": "~0.2.18",
     "angular-bootstrap": "~1.1.2",
