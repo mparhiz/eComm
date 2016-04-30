@@ -1,53 +1,23 @@
 'use strict'
 describe("ProductsController controller", function(){
-/*
-	//var $controller;
-	var mockSpecialProductsService, mockMainService;
-	
-	beforeEach(module('products'));
-	
-	beforeEach(inject(function($controller){
-		var ProductsController = $controller('ProductsController', {
-			SpecialProductsService: mockSpecialProductsService,
-			mainService: mockMainService
-		});
-	}));
-
-
-	it("should be 9", function(){
-		expect(ProductsController.maxSize).toBeDefined();
-		expect(ProductsController.maxSize.test(9)).toBe(true);
-		expect(ProductsController.maxSize.test(1)).toBe(false);
-	});
-
-	beforeEach(inject(function(_$controller_){
-		$controller = _$controller_;
-	}));
-	
-	describe("SIMPLE TEST", function(){
-		it("shuld be 5.", function(){
-			var $scope = {};
-			var controller = $controller('ProductsController', { $scope: $scope });
-			expect(controller.sortBy.availableOptions.length).toBe(5);
-		});
-	});
-*/
 	var ctrl,
 		$stateParams,
 		$rootScope,
-		$scope,
 		$filter,
 		mockMainService,
-		mockSpecialProductsService;
-	
-	$stateParams = {category: '', special: 'all'};
+		mockSpecialProductsService,
+		$httpBackend,
+		products = [],
+		specials = [];
+
+	$stateParams = {category: 'baby', special: 'all'};
 	
 	beforeEach(function(){
 		module('main', 'products', 'specialProducts', 'ui.router');
-		inject(function(_$controller_, _$rootScope_, _$filter_, _mainService_, _SpecialProductsService_){
+		inject(function(_$controller_, _$rootScope_, _$filter_, _mainService_, _SpecialProductsService_, _$httpBackend_){
 			$rootScope = _$rootScope_;
-			$scope = $rootScope.$new();
 			$filter = _$filter_;
+			$httpBackend = _$httpBackend_;
 			mockMainService = _mainService_;
 			mockSpecialProductsService = _SpecialProductsService_;
 			ctrl = _$controller_("ProductsController",{
@@ -58,14 +28,49 @@ describe("ProductsController controller", function(){
 			});
 		});
 
+		$httpBackend.when('GET', 'api/products')
+			.respond(products);
+
+		$httpBackend.when('GET', 'api/main/special/tabs')
+			.respond(specials);
+
 		//$rootScope.$digest();
 	});
 
-	it('hello test', function(){
-		expect('hello').toEqual('hello');
+	afterEach(function(){
+		$httpBackend.flush();
+		$rootScope.$digest();
 	});
 
-	xit('shuld be exist', function(){
-		//expect(controller).toExist;
+
+	it('shuld be exist', function(){
+		expect(ctrl).toExist;
 	});
+	
+	describe('. Variables should be defined: ', function(){
+		it("maxSize should be 9", function(){
+			expect(ctrl.maxSize).toBeDefined();
+			expect(ctrl.maxSize).toBe(9);
+			ctrl.maxSize = 10;
+			expect(ctrl.maxSize).toBe(10);
+		});
+		it("category and special variables should be defined", function(){
+			expect(ctrl.category).toEqual($stateParams.category);
+			expect(ctrl.special).toEqual($stateParams.special);
+		});
+
+		it("categories and specials should have value", function(){
+			//$rootScope.$digest();
+			//var categories = [];
+
+			//expect(ctrl.categories).toEqual(categories);
+
+
+
+console.log(products);
+console.log("mm = "+ctrl.special);
+			expect(ctrl.specials).toExist;
+		});
+	});
+
 });

@@ -54,17 +54,6 @@
 				vm.selectedSpecial = _.find(vm.specials, ['tabName' , vm.special]);
 
 				vm.retriveProductsOnPage();
-/*
-				mainService.retriveSpecialProductsData(vm.selectedSpecial.tabName)
-					.then(function(products){
-						vm.products = products;
-						vm.displayProducts = vm.orderBy(vm.products, vm.sortBy.selectedOption.key, vm.sortBy.selectedOption.reverse);
-						vm.totalItems = vm.displayProducts.length;
-						vm.displayProducts = vm.limitTo(vm.displayProducts, vm.currentPage*vm.itemPerPage.selectedOption);
-						vm.displayProducts = vm.limitTo(vm.displayProducts, -1*vm.itemPerPage.selectedOption);
-						vm.treeData = vm.createTreeOfCategories(products);
-					});
-*/
 			});
 
 		vm.showSelected = function(node_){
