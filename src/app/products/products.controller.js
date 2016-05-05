@@ -40,21 +40,28 @@
 							availableOptions: [9,27,54,108],
 							selectedOption: 9
 						};
-		
-		mainService.retriveCategories()
-			.then(function(categories){
-				vm.categories = _.concat([''], categories);
-				vm.selectedCategory = vm.categories[0];
-			});
 
-		SpecialProductsService.retrieveTabsInfo()
-			.then( function(tabs) {
-				vm.specials = _.concat({ "title" : "", "icon" : "", "tabName" : "all"}, tabs);
+		vm.getCategories = function(){
+			mainService.retriveCategories()
+				.then(function(categories){
+					vm.categories = _.concat([''], categories);
+					vm.selectedCategory = vm.categories[0];
+				});	
+		}
 
-				vm.selectedSpecial = _.find(vm.specials, ['tabName' , vm.special]);
+		vm.getTabsInfo = function(){
+			SpecialProductsService.retrieveTabsInfo()
+				.then( function(tabs) {
+					vm.specials = _.concat({ "title" : "", "icon" : "", "tabName" : "all"}, tabs);
 
-				vm.retriveProductsOnPage();
-			});
+					vm.selectedSpecial = _.find(vm.specials, ['tabName' , vm.special]);
+
+					vm.retriveProductsOnPage();
+				});
+		}
+
+		vm.getCategories();
+		vm.getTabsInfo();
 
 		vm.showSelected = function(node_){
 			vm.treeSelectedNode = node_;
@@ -67,7 +74,7 @@
 				vm.selectedSubCategory = vm.treeSelectedNode.name;
 			}
 			vm.refreshOnPage();
-		};
+		}
 		
 		vm.retriveSubCategories = function(category_){
 			vm.selectedSubCategory = "";

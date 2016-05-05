@@ -40,10 +40,13 @@
 
 						GetProductDetailImageService.retrieveImages(vm.productId)
 							.then( function(images) {
-								vm.images = images;
-
-								if (angular.isDefined(vm.images.imagesUrl)) {
-									vm.arrayOfImageGroup = _.chunk(vm.images.imagesUrl, vm.groupSize);
+								vm.images = {};
+								vm.arrayOfImageGroup = [];
+								if (images != 500 && images != 404) {
+									vm.images = images;
+									if (angular.isDefined(vm.images.imagesUrl)) {
+										vm.arrayOfImageGroup = _.chunk(vm.images.imagesUrl, vm.groupSize);
+									}									
 								}
 							});
 					}

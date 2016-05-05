@@ -168,14 +168,15 @@
         function translationKeysService($cacheFactory, $http, URL_MAPPINGS){
             var vm = this;
             vm.cache = $cacheFactory('translateCache');
-            $http.get(URL_MAPPINGS.TRANSLATION_KEYS)
-                .then(function successCallback(response){
-                    angular.forEach(response.data, function(value, key){
-                        vm.cache.put(key,value);
-                    });
-                });
-
             return {
+                putTranslatesIntoCache: function(){
+                    $http.get(URL_MAPPINGS.TRANSLATION_KEYS)
+                        .then(function successCallback(response){
+                            angular.forEach(response.data, function(value, key){
+                                vm.cache.put(key,value);
+                            });
+                        });                    
+                },
                 retriveTranslatedKey: function(_key){
                     var translatedKey = vm.cache.get(_key);
                     return (angular.isUndefined(translatedKey)) ? "no translate" : translatedKey;

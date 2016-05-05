@@ -1,51 +1,48 @@
-'use strict'
-describe('CarouselService' ,function() {
-  var CarouselService,
-    $rootScope,
-    $httpBackend;
+(function() {
+  'use strict';
 
-  beforeEach(module('carousel'));
+  describe('CarouselService service', function() {
+    var CarouselService,
+      $httpBackend;
 
-  beforeEach(inject(function(_CarouselService_, _$rootScope_, _$httpBackend_) {
-    CarouselService = _CarouselService_;
-    $rootScope = _$rootScope_;
-    $httpBackend = _$httpBackend_;
-  }));
+    beforeEach(module('eComm'));
+    beforeEach(inject(function(_CarouselService_, _$httpBackend_) {
+      CarouselService = _CarouselService_;
+      $httpBackend = _$httpBackend_;
+    }));
 
-  describe('retrieveOddSlides()', function() {
-    var allSides;
-    beforeEach(function() {
-      allSlides = [
-        {title: 'sample1'},
-        {title: 'slide2'},
-        {title: 'sample3'},
-        {title: 'sample3'},
-        {title: 'sample3'}
-      ];
-
-      $httpBackend.when('GET', 'api/main/carousel')
-        .respond(allSlides);
+    it('should be registered', function() {
+      expect(CarouselService).not.toEqual(null);
     });
 
-    afterEach(function() {
-      $httpBackend.flush();
-      $rootScope.$digest();
+    describe('retrieveCarouselSlides function', function() {
+      it('should exist', function() {
+        expect(CarouselService.retrieveCarouselSlides).not.toEqual(null);
+      });
+
+      it('should return array of object', function() {
+        CarouselService.retrieveCarouselSlides()
+          .then(function(slides){
+            expect(slides).toEqual(jasmine.any(Array));
+            expect(slides[0]).toEqual(jasmine.any(Object));
+            expect(slides.length > 0).toBeTruthy();
+            expect(slides[1].caption).toEqual('CAROUSEL_TITLE_2');
+          });
+      });
+  
+      it('should return same as httpBackend returned', function() {
+        var allSlides = [];
+        $httpBackend.when('GET', 'api/main/carousel')
+          .respond(allSlides);
+
+        CarouselService.retrieveCarouselSlides()
+          .then(function(slides) {
+            expect(slides.length).toBe(4);
+            expect(slides.length).toBe(allSlides.length);
+            expect(slides).toEqual(allSlides);
+            expect(slides[1].caption).toEqual(allSlides[1].caption);
+          });
+      });
     });
-/*
-    it('should return a single slide if 3 slides are provided.', function() {
-      CarouselService.retrieveOddSlides()
-        .then(function(oddSlides) {
-          expect(oddSlides.length).toBe(2);
-        });
-    });
-/*
-    it('should return the 2nd slide if 3 slides are provided.', function() {
-      CarouselService.retrieveOddSlides()
-        .then(function(oddSlides) {
-          expect(oddSlides[0].title).toBe(allSlides[1].title);
-          expect(oddSlides[1].title).toBe(allSlides[3].title);
-        });
-    });
-*/
   });
-});
+})();
